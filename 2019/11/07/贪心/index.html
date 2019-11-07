@@ -8,17 +8,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>miracle_DZL的博客</title>
+  <title>贪心 | miracle_DZL的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我爱学习，学习爱我">
+  <meta name="description" content="分治法分治法的基本思想分治法的基本思想是将一个大规模的问题划分为若干个小规模的子问题，这些子问题相互独立且与原问题相同。递归的解决这些子问题，然后将各个子问题的解合并得到原问题的解。 而根据分治法的分割原则，应该把原问题分成多少个子问题才合适呢？没个子问题是否规模相等或怎样才最适当？通过大量实践发现，最好使子问题的规模大致相同，即将问题划分为大小相等的k个子问题比较合适。  二分搜索法二分搜索是分">
 <meta name="keywords" content="java web python 考研 算法 数据结构">
-<meta property="og:type" content="website">
-<meta property="og:title" content="miracle_DZL的博客">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="贪心">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;07&#x2F;%E8%B4%AA%E5%BF%83&#x2F;index.html">
 <meta property="og:site_name" content="miracle_DZL的博客">
-<meta property="og:description" content="我爱学习，学习爱我">
+<meta property="og:description" content="分治法分治法的基本思想分治法的基本思想是将一个大规模的问题划分为若干个小规模的子问题，这些子问题相互独立且与原问题相同。递归的解决这些子问题，然后将各个子问题的解合并得到原问题的解。 而根据分治法的分割原则，应该把原问题分成多少个子问题才合适呢？没个子问题是否规模相等或怎样才最适当？通过大量实践发现，最好使子问题的规模大致相同，即将问题划分为大小相等的k个子问题比较合适。  二分搜索法二分搜索是分">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20161203163252550">
+<meta property="og:updated_time" content="2019-11-07T13:17:35.780Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20161203163252550">
   
     <link rel="alternative" href="/atom.xml" title="miracle_DZL的博客" type="application/atom+xml">
   
@@ -150,16 +153,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-贪心" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-贪心" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/07/%E8%B4%AA%E5%BF%83/">贪心</a>
+    <h1 class="article-title" itemprop="name">
+      贪心
     </h1>
   
 
@@ -192,6 +193,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -199,16 +221,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/07/%E8%B4%AA%E5%BF%83/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/07/%E8%B4%AA%E5%BF%83/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/07/%E6%97%B6%E9%97%B4%E6%95%88%E7%8E%87%E7%AE%A1%E7%90%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">时间效率管理</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -223,209 +304,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-时间效率管理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/07/%E6%97%B6%E9%97%B4%E6%95%88%E7%8E%87%E7%AE%A1%E7%90%86/">时间效率管理</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/07/%E6%97%B6%E9%97%B4%E6%95%88%E7%8E%87%E7%AE%A1%E7%90%86/" class="archive-article-date">
-  	<time datetime="2019-11-07T11:08:51.675Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://q0lhqnf0a.bkt.clouddn.com/b1.jpg" alt=""></p>
-<h1 id="提高效率的方法——六点优先工作制"><a href="#提高效率的方法——六点优先工作制" class="headerlink" title="提高效率的方法——六点优先工作制"></a>提高效率的方法——六点优先工作制</h1>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/07/%E6%97%B6%E9%97%B4%E6%95%88%E7%8E%87%E7%AE%A1%E7%90%86/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#分治法"><span class="toc-number">1.</span> <span class="toc-text">分治法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#分治法的基本思想"><span class="toc-number">1.1.</span> <span class="toc-text">分治法的基本思想</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二分搜索法"><span class="toc-number">1.2.</span> <span class="toc-text">二分搜索法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#大整数乘法"><span class="toc-number">1.3.</span> <span class="toc-text">大整数乘法</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
   
-    <article id="post-2.1递归" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/04/2.1%E9%80%92%E5%BD%92/">2.1递归</a>
-    </h1>
   
 
-        
-        <a href="/2019/11/04/2.1%E9%80%92%E5%BD%92/" class="archive-article-date">
-  	<time datetime="2019-11-04T13:46:57.720Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>2.1递归</p>
-<p>概念：直接或间接的调用自身的算法成为递归算法。用函数自身给出定义的函数成为递归函数。</p>
-<p>2-1阶乘函数。阶乘函数可递归的定义为
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/04/2.1%E9%80%92%E5%BD%92/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-因为热爱" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/28/%E5%9B%A0%E4%B8%BA%E7%83%AD%E7%88%B1/">因为热爱</a>
-    </h1>
   
 
-        
-        <a href="/2019/10/28/%E5%9B%A0%E4%B8%BA%E7%83%AD%E7%88%B1/" class="archive-article-date">
-  	<time datetime="2019-10-28T12:05:11.304Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>title:博客的第一次开通</p>
-<hr>
-<p>欢迎大家来到我的博客，我非常高兴，能在博客分享自己的故事与经历，或许能帮助大家。</p>
-<h2 id="所谓热爱，就是不断的坚持和投入"><a href="#所谓热爱，就是不断的坚持和投入" class="headerlink" title="所谓热爱，就是不断的坚持和投入"></a>所谓热爱，就是不断的坚持和投入
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/28/%E5%9B%A0%E4%B8%BA%E7%83%AD%E7%88%B1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
+
   
 
 
@@ -448,8 +352,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
