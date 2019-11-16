@@ -8,17 +8,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>miracle_DZL的博客</title>
+  <title>利用jdbc mysql简单实现职员管理系统 | miracle_DZL的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我爱学习，学习爱我">
+  <meta name="description" content="利用jdbc mysql简单实现职员管理系统1.安装mysql数据库，下载jdba的mysql的jar包mysql下载：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1k0146Keg-ugsJihZaRR-Ng jar包下载：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1LmbGGtDRVMocT_JWRxYz7A 2.在项目目录下新建文件夹lib，将jar包复制进去，右击lib文件夹选择">
 <meta name="keywords" content="java web python 考研 算法 数据结构">
-<meta property="og:type" content="website">
-<meta property="og:title" content="miracle_DZL的博客">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用jdbc mysql简单实现职员管理系统">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;16&#x2F;%E5%88%A9%E7%94%A8jdbc%20mysql%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E8%81%8C%E5%91%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F&#x2F;index.html">
 <meta property="og:site_name" content="miracle_DZL的博客">
-<meta property="og:description" content="我爱学习，学习爱我">
+<meta property="og:description" content="利用jdbc mysql简单实现职员管理系统1.安装mysql数据库，下载jdba的mysql的jar包mysql下载：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1k0146Keg-ugsJihZaRR-Ng jar包下载：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1LmbGGtDRVMocT_JWRxYz7A 2.在项目目录下新建文件夹lib，将jar包复制进去，右击lib文件夹选择">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http:&#x2F;&#x2F;q0lhqnf0a.bkt.clouddn.com&#x2F;1.PNG">
+<meta property="og:image" content="http:&#x2F;&#x2F;q0lhqnf0a.bkt.clouddn.com&#x2F;2.PNG">
+<meta property="og:image" content="http:&#x2F;&#x2F;q0lhqnf0a.bkt.clouddn.com&#x2F;3.PNG">
+<meta property="og:image" content="http:&#x2F;&#x2F;q0lhqnf0a.bkt.clouddn.com&#x2F;4.PNG">
+<meta property="og:updated_time" content="2019-11-16T11:41:18.370Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;q0lhqnf0a.bkt.clouddn.com&#x2F;1.PNG">
   
     <link rel="alternative" href="/atom.xml" title="miracle_DZL的博客" type="application/atom+xml">
   
@@ -150,16 +156,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-利用jdbc mysql简单实现职员管理系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-利用jdbc mysql简单实现职员管理系统" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/16/%E5%88%A9%E7%94%A8jdbc%20mysql%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E8%81%8C%E5%91%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">利用jdbc mysql简单实现职员管理系统</a>
+    <h1 class="article-title" itemprop="name">
+      利用jdbc mysql简单实现职员管理系统
     </h1>
   
 
@@ -174,10 +178,46 @@
       
         <h1 id="利用jdbc-mysql简单实现职员管理系统"><a href="#利用jdbc-mysql简单实现职员管理系统" class="headerlink" title="利用jdbc mysql简单实现职员管理系统"></a>利用jdbc mysql简单实现职员管理系统</h1><h2 id="1-安装mysql数据库，下载jdba的mysql的jar包"><a href="#1-安装mysql数据库，下载jdba的mysql的jar包" class="headerlink" title="1.安装mysql数据库，下载jdba的mysql的jar包"></a>1.安装mysql数据库，下载jdba的mysql的jar包</h2><p>mysql下载：<a href="https://pan.baidu.com/s/1k0146Keg-ugsJihZaRR-Ng" target="_blank" rel="noopener">https://pan.baidu.com/s/1k0146Keg-ugsJihZaRR-Ng</a></p>
 <p>jar包下载：<a href="https://pan.baidu.com/s/1LmbGGtDRVMocT_JWRxYz7A" target="_blank" rel="noopener">https://pan.baidu.com/s/1LmbGGtDRVMocT_JWRxYz7A</a></p>
-<h2 id="2-在项目目录下新建文件夹lib，将jar包复制进去，右击lib文件夹选择Add-as-Library…，选择moudle-library点击ok。"><a href="#2-在项目目录下新建文件夹lib，将jar包复制进去，右击lib文件夹选择Add-as-Library…，选择moudle-library点击ok。" class="headerlink" title="2.在项目目录下新建文件夹lib，将jar包复制进去，右击lib文件夹选择Add as Library…，选择moudle library点击ok。"></a>2.在项目目录下新建文件夹lib，将jar包复制进去，右击lib文件夹选择Add as Library…，选择moudle library点击ok。
-        
+<h2 id="2-在项目目录下新建文件夹lib，将jar包复制进去，右击lib文件夹选择Add-as-Library…，选择moudle-library点击ok。"><a href="#2-在项目目录下新建文件夹lib，将jar包复制进去，右击lib文件夹选择Add-as-Library…，选择moudle-library点击ok。" class="headerlink" title="2.在项目目录下新建文件夹lib，将jar包复制进去，右击lib文件夹选择Add as Library…，选择moudle library点击ok。"></a>2.在项目目录下新建文件夹lib，将jar包复制进去，右击lib文件夹选择Add as Library…，选择moudle library点击ok。<a id="more"></a></h2><p><img src="http://q0lhqnf0a.bkt.clouddn.com/1.PNG" alt=""></p>
+<p><img src="http://q0lhqnf0a.bkt.clouddn.com/2.PNG" alt=""></p>
+<h2 id="3-创建编写JDBCUtils工具类"><a href="#3-创建编写JDBCUtils工具类" class="headerlink" title="3.创建编写JDBCUtils工具类"></a>3.创建编写JDBCUtils工具类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.chenlun.util;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.sql.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JDBCUtils</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String url;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String user;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String password;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String driver;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 文件的读取，只需要读取一次即可拿到这些值。使用静态代码块</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String USER = <span class="string">"root"</span>;   <span class="comment">//你数据库的用户名</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String PSD = <span class="string">"root"</span>;    <span class="comment">//你数据库的密码</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String URL = <span class="string">"jdbc:mysql:///system"</span>;  <span class="comment">//数据库</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String DRIVER = <span class="string">"com.mysql.jdbc.Driver"</span>;</span><br><span class="line">    <span class="keyword">static</span>&#123;</span><br><span class="line">        <span class="comment">//读取资源文件，获取值。</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//4. 注册驱动</span></span><br><span class="line">            Class.forName(DRIVER);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取连接</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 连接对象</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Connection <span class="title">getConnection</span><span class="params">()</span> <span class="keyword">throws</span> SQLException </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> DriverManager.getConnection(URL, USER, PSD);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 释放资源</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> stmt</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> conn</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">close</span><span class="params">(Statement stmt, Connection conn)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>( stmt != <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                stmt.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>( conn != <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                conn.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 释放资源</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> stmt</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> conn</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">close</span><span class="params">(ResultSet rs, Statement stmt, Connection conn)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>( rs != <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                rs.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>( stmt != <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                stmt.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>( conn != <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                conn.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-创建编写增删改查方法接口和实现类"><a href="#4-创建编写增删改查方法接口和实现类" class="headerlink" title="4.创建编写增删改查方法接口和实现类"></a>4.创建编写增删改查方法接口和实现类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.chenlun.control;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Method</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">query</span><span class="params">()</span> <span class="keyword">throws</span> SQLException</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span> <span class="keyword">throws</span> SQLException</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delete</span><span class="params">()</span> <span class="keyword">throws</span> SQLException</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">modify</span><span class="params">()</span> <span class="keyword">throws</span> SQLException</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><span class="line">package cn.chenlun.control;</span><br><span class="line"></span><br><span class="line">import cn.chenlun.util.JDBCUtils;</span><br><span class="line"></span><br><span class="line">import java.sql.Connection;</span><br><span class="line">import java.sql.ResultSet;</span><br><span class="line">import java.sql.SQLException;</span><br><span class="line">import java.sql.PreparedStatement;</span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">public class MethodImpl implements Method &#123;</span><br><span class="line">    @Override</span><br><span class="line">    </span><br><span class="line">    //查询</span><br><span class="line">    public void query() throws SQLException &#123;</span><br><span class="line">        Connection connection = JDBCUtils.getConnection();</span><br><span class="line">        String sql = &quot;select * from inform&quot;;</span><br><span class="line">        PreparedStatement preparedStatement = connection.prepareStatement(sql);</span><br><span class="line">        ResultSet resultSet = preparedStatement.executeQuery();</span><br><span class="line">        while (resultSet.next()) &#123;</span><br><span class="line">            String id = resultSet.getString(&quot;id&quot;);</span><br><span class="line">            String name = resultSet.getString(&quot;name&quot;);</span><br><span class="line">            String sex = resultSet.getString(&quot;sex&quot;);</span><br><span class="line">            int queke = resultSet.getInt(&quot;queke&quot;);</span><br><span class="line">            String apartment = resultSet.getString(&quot;apartment&quot;);</span><br><span class="line">            int salary = resultSet.getInt(&quot;salary&quot;);</span><br><span class="line"></span><br><span class="line">            System.out.println(&quot;工号:&quot; + id +&quot;,姓名:&quot; + name + &quot;,性别:&quot; + sex + &quot;,缺课数:&quot; + queke + &quot;,系部:&quot;</span><br><span class="line">            + apartment + &quot;,工资:&quot; + salary);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        JDBCUtils.close(resultSet,preparedStatement,connection);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">	//添加</span><br><span class="line">    @Override</span><br><span class="line">    public void add() throws SQLException&#123;</span><br><span class="line">        Scanner sc = new Scanner(System.in);</span><br><span class="line">        System.out.println(&quot;输入添加的记录&quot;);</span><br><span class="line">        System.out.println(&quot;工号&quot;);</span><br><span class="line">        String id = sc.next();</span><br><span class="line">        System.out.println(&quot;姓名&quot;);</span><br><span class="line">        String name = sc.next();</span><br><span class="line">        System.out.println(&quot;性别&quot;);</span><br><span class="line">        String sex = sc.next();</span><br><span class="line">        System.out.println(&quot;缺课数量&quot;);</span><br><span class="line">        int queke = sc.nextInt();</span><br><span class="line">        System.out.println(&quot;系部&quot;);</span><br><span class="line">        String apartment = sc.next();</span><br><span class="line">        System.out.println(&quot;基本工资&quot;);</span><br><span class="line">        int salary = sc.nextInt();</span><br><span class="line">        Connection connection = JDBCUtils.getConnection();</span><br><span class="line">        String sql = &quot;insert into inform values (?,?,?,?,?,?)&quot;;</span><br><span class="line">        PreparedStatement pt = connection.prepareStatement(sql);</span><br><span class="line">        pt.setString(1,id);</span><br><span class="line">        pt.setString(2,name);</span><br><span class="line">        pt.setString(3,sex);</span><br><span class="line">        pt.setInt(4,queke);</span><br><span class="line">        pt.setString(5,apartment);</span><br><span class="line">        pt.setInt(6,salary);</span><br><span class="line">        int resultSet = pt.executeUpdate();</span><br><span class="line">        System.out.println(&quot;成功插入&quot;+resultSet+&quot;条记录&quot;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line">	//删除</span><br><span class="line">    @Override</span><br><span class="line">    public void delete() throws SQLException &#123;</span><br><span class="line">        Scanner sc = new Scanner(System.in);</span><br><span class="line">        Connection connection = JDBCUtils.getConnection();</span><br><span class="line">        String sql = &quot;delete from inform where name = ?&quot;;</span><br><span class="line">        System.out.println(&quot;你要删除人的姓名:&quot;);</span><br><span class="line">        String s = sc.next();</span><br><span class="line">        PreparedStatement preparedStatement = connection.prepareStatement(sql);</span><br><span class="line">        preparedStatement.setString(1,s);</span><br><span class="line">        int resultSet = preparedStatement.executeUpdate();</span><br><span class="line">        System.out.println(&quot;删除了&quot;+resultSet+&quot;条记录&quot;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line">	//修改</span><br><span class="line">    @Override</span><br><span class="line">    public void modify() throws SQLException &#123;</span><br><span class="line">        Scanner scanner = new Scanner(System.in);</span><br><span class="line">        Connection connection = JDBCUtils.getConnection();</span><br><span class="line">        String sql = &quot;update inform set sex=?,queke=?,apartment=?,salary=? where name = ?&quot;;</span><br><span class="line">        System.out.println(&quot;输入你想修改人的姓名&quot;);</span><br><span class="line">        String name = scanner.next();</span><br><span class="line">        System.out.println(&quot;性别&quot;);</span><br><span class="line">        String asex = scanner.next();</span><br><span class="line">        System.out.println(&quot;缺课数&quot;);</span><br><span class="line">        int aqueke = scanner.nextInt();</span><br><span class="line">        System.out.println(&quot;系部&quot;);</span><br><span class="line">        String aapartment = scanner.next();</span><br><span class="line">        System.out.println(&quot;基本工资&quot;);</span><br><span class="line">        int asalary = scanner.nextInt();</span><br><span class="line">        PreparedStatement preparedStatement = connection.prepareStatement(sql);</span><br><span class="line">        preparedStatement.setString(1,asex);</span><br><span class="line">        preparedStatement.setInt(2,aqueke);</span><br><span class="line">        preparedStatement.setString(3,aapartment);</span><br><span class="line">        preparedStatement.setInt(4,asalary);</span><br><span class="line">        preparedStatement.setString(5,name);</span><br><span class="line">        int resultSet = preparedStatement.executeUpdate();</span><br><span class="line">        System.out.println(&quot;成功修改&quot;+resultSet+&quot;条数据&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="5-创建编写主类"><a href="#5-创建编写主类" class="headerlink" title="5.创建编写主类"></a>5.创建编写主类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.chenlun.domain;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> cn.chenlun.control.MethodImpl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(<span class="keyword">true</span>)&#123;</span><br><span class="line">            ui();</span><br><span class="line">            Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">            MethodImpl m = <span class="keyword">new</span> MethodImpl();</span><br><span class="line">            <span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">            <span class="keyword">if</span> (n == <span class="number">1</span>)</span><br><span class="line">                m.query();</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (n == <span class="number">2</span>)</span><br><span class="line">                m.add();</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (n == <span class="number">3</span>)</span><br><span class="line">                m.modify();</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (n == <span class="number">4</span>)</span><br><span class="line">                m.delete();</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                System.out.println(<span class="string">"输入错误 请重新输入:"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">ui</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"1.查询员工信息"</span>);</span><br><span class="line">        System.out.println(<span class="string">"2.添加员工信息"</span>);</span><br><span class="line">        System.out.println(<span class="string">"3.修改员工信息"</span>);</span><br><span class="line">        System.out.println(<span class="string">"4.删除员工信息"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="最终实现"><a href="#最终实现" class="headerlink" title="最终实现"></a>最终实现</h2><p><img src="http://q0lhqnf0a.bkt.clouddn.com/3.PNG" alt=""></p>
+<p><img src="http://q0lhqnf0a.bkt.clouddn.com/4.PNG" alt=""></p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -186,16 +226,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/16/%E5%88%A9%E7%94%A8jdbc%20mysql%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E8%81%8C%E5%91%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/16/%E5%88%A9%E7%94%A8jdbc%20mysql%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E8%81%8C%E5%91%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/07/%E8%B4%AA%E5%BF%83/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">贪心</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -210,272 +309,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-贪心" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/07/%E8%B4%AA%E5%BF%83/">贪心</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/07/%E8%B4%AA%E5%BF%83/" class="archive-article-date">
-  	<time datetime="2019-11-07T12:06:37.739Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="分治法"><a href="#分治法" class="headerlink" title="分治法"></a>分治法</h1><h2 id="分治法的基本思想"><a href="#分治法的基本思想" class="headerlink" title="分治法的基本思想"></a>分治法的基本思想</h2><p>分治法的基本思想是将一个大规模的问题划分为若干个小规模的子问题，这些子问题相互独立且与原问题相同。递归的解决这些子问题，然后将各个子问题的解合并得到原问题的解。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/07/%E8%B4%AA%E5%BF%83/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#利用jdbc-mysql简单实现职员管理系统"><span class="toc-number">1.</span> <span class="toc-text">利用jdbc mysql简单实现职员管理系统</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-安装mysql数据库，下载jdba的mysql的jar包"><span class="toc-number">1.1.</span> <span class="toc-text">1.安装mysql数据库，下载jdba的mysql的jar包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-在项目目录下新建文件夹lib，将jar包复制进去，右击lib文件夹选择Add-as-Library…，选择moudle-library点击ok。"><span class="toc-number">1.2.</span> <span class="toc-text">2.在项目目录下新建文件夹lib，将jar包复制进去，右击lib文件夹选择Add as Library…，选择moudle library点击ok。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-创建编写JDBCUtils工具类"><span class="toc-number">1.3.</span> <span class="toc-text">3.创建编写JDBCUtils工具类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-创建编写增删改查方法接口和实现类"><span class="toc-number">1.4.</span> <span class="toc-text">4.创建编写增删改查方法接口和实现类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-创建编写主类"><span class="toc-number">1.5.</span> <span class="toc-text">5.创建编写主类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最终实现"><span class="toc-number">1.6.</span> <span class="toc-text">最终实现</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
   
-    <article id="post-时间效率管理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/07/%E6%97%B6%E9%97%B4%E6%95%88%E7%8E%87%E7%AE%A1%E7%90%86/">时间效率管理</a>
-    </h1>
   
 
-        
-        <a href="/2019/11/07/%E6%97%B6%E9%97%B4%E6%95%88%E7%8E%87%E7%AE%A1%E7%90%86/" class="archive-article-date">
-  	<time datetime="2019-11-07T11:08:51.675Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://q0lhqnf0a.bkt.clouddn.com/b1.jpg" alt=""></p>
-<h1 id="提高效率的方法——六点优先工作制"><a href="#提高效率的方法——六点优先工作制" class="headerlink" title="提高效率的方法——六点优先工作制"></a>提高效率的方法——六点优先工作制</h1>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/07/%E6%97%B6%E9%97%B4%E6%95%88%E7%8E%87%E7%AE%A1%E7%90%86/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2.1递归" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/04/2.1%E9%80%92%E5%BD%92/">2.1递归</a>
-    </h1>
   
 
-        
-        <a href="/2019/11/04/2.1%E9%80%92%E5%BD%92/" class="archive-article-date">
-  	<time datetime="2019-11-04T13:46:57.720Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>2.1递归</p>
-<p>概念：直接或间接的调用自身的算法成为递归算法。用函数自身给出定义的函数成为递归函数。</p>
-<p>2-1阶乘函数。阶乘函数可递归的定义为
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/04/2.1%E9%80%92%E5%BD%92/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-因为热爱" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/28/%E5%9B%A0%E4%B8%BA%E7%83%AD%E7%88%B1/">因为热爱</a>
-    </h1>
   
 
-        
-        <a href="/2019/10/28/%E5%9B%A0%E4%B8%BA%E7%83%AD%E7%88%B1/" class="archive-article-date">
-  	<time datetime="2019-10-28T12:05:11.304Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>title:博客的第一次开通</p>
-<hr>
-<p>欢迎大家来到我的博客，我非常高兴，能在博客分享自己的故事与经历，或许能帮助大家。</p>
-<h2 id="所谓热爱，就是不断的坚持和投入"><a href="#所谓热爱，就是不断的坚持和投入" class="headerlink" title="所谓热爱，就是不断的坚持和投入"></a>所谓热爱，就是不断的坚持和投入
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/28/%E5%9B%A0%E4%B8%BA%E7%83%AD%E7%88%B1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -498,8 +357,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
