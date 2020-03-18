@@ -152,6 +152,206 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-面向对象分析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/18/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%86%E6%9E%90/">面向对象分析</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/18/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%86%E6%9E%90/" class="archive-article-date">
+  	<time datetime="2020-03-18T02:26:29.839Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="面向对象分析"><a href="#面向对象分析" class="headerlink" title="面向对象分析"></a>面向对象分析</h1><p>分析即把用户需求转换为系统需求</p>
+<p>[TOC]</p>
+<h2 id="面向对象的主要步骤："><a href="#面向对象的主要步骤：" class="headerlink" title="面向对象的主要步骤："></a>面向对象的主要步骤：</h2><ol>
+<li>识别对象</li>
+<li>组织对象</li>
+<li>定义对象之间的关系</li>
+<li>定义对象的操作</li>
+<li>定义对象内部细节</li>
+</ol>
+<p>领域（用户角度） 系统（开发人员的角度）</p>
+<p>概念模型：表示了问题领域的“概念”及其关系，也称为领域模型。UML图形表示为“没有定义操作的类图”。概念类 == 领域概念</p>
+<h2 id="如何找到概念类："><a href="#如何找到概念类：" class="headerlink" title="如何找到概念类："></a>如何找到概念类：</h2><h3 id="1-概念模型-即“名词法”"><a href="#1-概念模型-即“名词法”" class="headerlink" title="1.概念模型 即“名词法”"></a>1.概念模型 即“名词法”</h3><ol>
+<li><p>​    重用或者修改已有的模型</p>
+</li>
+<li><p>​    借助行业，公司内部法的“概念类列表”</p>
+</li>
+<li><p>​    ☆在需求描述中查询名词（短语）：</p>
+<p>1.在问题领域的文本描述中，标识出名词，名词短语，把他们作为候选的概念类或者属性。</p>
+<p>2.对发现的名称短语进行分析，辨别是合适的概念类吗？概念可以合并吗？等等</p>
+<p>3.定义概念类之间的关系4.定义概念类之间的属性</p>
+<p>注意：</p>
+<p>​    不能机械的转换“名称”–&gt;“概念类”</p>
+<p>​    自然语言描述的文字有歧义，重复，一词多意，一意多次等，要仔细 分析</p>
+<p>​    比如英语，复数一般就不需要了，students\student,只要student即可。</p>
+</li>
+</ol>
+<h3 id="名词法案例：用例：废品回收机"><a href="#名词法案例：用例：废品回收机" class="headerlink" title="名词法案例：用例：废品回收机"></a>名词法案例：用例：废品回收机</h3><p><img src="C:%5CUsers%5CDZL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1584497080079.png" alt="1584497080079"></p>
+<p><img src="C:%5CUsers%5CDZL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1584497145689.png" alt="1584497145689"></p>
+<p><img src="C:%5CUsers%5CDZL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1584497357085.png" alt="1584497357085"></p>
+<p><img src="C:%5CUsers%5CDZL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1584497457119.png" alt="1584497457119"></p>
+<p><img src="C:%5CUsers%5CDZL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1584497491812.png" alt="1584497491812"></p>
+<p><img src="C:%5CUsers%5CDZL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1584497564559.png" alt="1584497564559"></p>
+<p><img src="C:%5CUsers%5CDZL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1584497611025.png" alt="1584497611025"></p>
+<p><img src="C:%5CUsers%5CDZL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1584497749019.png" alt="1584497749019"></p>
+<h3 id="2分析模型法（边界-实体-控制）"><a href="#2分析模型法（边界-实体-控制）" class="headerlink" title="2分析模型法（边界 实体 控制）"></a>2分析模型法（边界 实体 控制）</h3><p>2.1分析模型法定义   </p>
+<p>2.2特性：行为， 展示(输入/输出) ，信息</p>
+<p>2.3分析模型的表示符号      边界类 控制类 信息</p>
+<p><img src="C:%5CUsers%5CDZL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1584497946171.png" alt="1584497946171"></p>
+<p>2.4分析模型的语义</p>
+<p><img src="C:%5CUsers%5CDZL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1584498064507.png" alt="1584498064507"></p>
+<p>实体对象对显示系统状态的信息建模。这些信息通常用于记录操作的效果，因此与系统的行为相关。边界/接口对象对输入和输出以及处理它们的操作建模。控制对象对功能/操作进行建模，用于验证和决定是否处理接口对象的信息并将其传递给实体对象，或以其他方式传递。</p>
+<p><img src="C:%5CUsers%5CDZL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1584498152284.png" alt="1584498152284"></p>
+<h3 id="分析模型案例：废品回收机"><a href="#分析模型案例：废品回收机" class="headerlink" title="分析模型案例：废品回收机"></a>分析模型案例：废品回收机</h3><p>​    找到和接口相关的概念：打印机接口 用户面板</p>
+<p>​    找到和实体相关的概念：罐子 计算  保存数据的</p>
+<p>​    找到控制相关的概念：代表的整个系统 Depoist item receiver</p>
+<p><img src="C:%5CUsers%5CDZL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1584498275680.png" alt="1584498275680"></p>
+<h3 id="3-CRC法，类、职责，协作"><a href="#3-CRC法，类、职责，协作" class="headerlink" title="3.CRC法，类、职责，协作"></a>3.CRC法，类、职责，协作</h3><p>见下篇</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/18/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%86%E6%9E%90/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-银行ATM机java swing实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/19/%E9%93%B6%E8%A1%8CATM%E6%9C%BAjava%20swing%E5%AE%9E%E7%8E%B0/">银行ATM机java swing实现</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/19/%E9%93%B6%E8%A1%8CATM%E6%9C%BAjava%20swing%E5%AE%9E%E7%8E%B0/" class="archive-article-date">
+  	<time datetime="2019-12-19T13:04:06.273Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="JAVA-Swing-JDBC-实现银行ATM机（1）"><a href="#JAVA-Swing-JDBC-实现银行ATM机（1）" class="headerlink" title="JAVA Swing JDBC 实现银行ATM机（1）"></a>JAVA Swing JDBC 实现银行ATM机（1）</h2><p>编写ATM机，实现ATM机的登录，查询，打印凭条，存款，取款，转账等功能</p>
+<p>后台有ATM管路，和银行卡管理</p>
+<p>采用mysql数据库 druid连接池 JDBC JFrame navicat</p>
+<p>1.建数据库表</p>
+<p>atm表</p>
+<p>CREATE TABLE <code>NewTable</code> (<br><code>atmID</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘机号’ ,<br><code>astate</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT ‘运行’ COMMENT ‘状态’ ,<br><code>atmBalance</code>  decimal(30,0) NOT NULL DEFAULT 0 COMMENT ‘ATM余额’ ,<br>PRIMARY KEY (<code>atmID</code>)<br>)<br>ENGINE=InnoDB<br>DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci<br>ROW_FORMAT=COMPACT<br>;</p>
+<p>bank表</p>
+<p>CREATE TABLE <code>NewTable</code> (<br><code>bankID</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘银行ID’ ,<br><code>bankname</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘银行名称’ ,<br>PRIMARY KEY (<code>bankID</code>)<br>)<br>ENGINE=InnoDB<br>DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci<br>ROW_FORMAT=COMPACT<br>;</p>
+<p>bankcard表</p>
+<p>CREATE TABLE <code>NewTable</code> (<br><code>idCard</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘卡号’ ,<br><code>password</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘密码’ ,<br><code>userID</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘用户id’ ,<br><code>balance</code>  decimal(30,0) NOT NULL COMMENT ‘余额’ ,<br><code>wrong</code>  int(10) NOT NULL COMMENT ‘密码错误次数’ ,<br><code>state</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘银行卡状态’ ,<br><code>bankID</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘银行ID’ ,<br>PRIMARY KEY (<code>idCard</code>),<br>FOREIGN KEY (<code>userID</code>) REFERENCES <code>user</code> (<code>userID</code>) ON DELETE RESTRICT ON UPDATE RESTRICT,<br>FOREIGN KEY (<code>bankID</code>) REFERENCES <code>bank</code> (<code>bankID</code>) ON DELETE RESTRICT ON UPDATE RESTRICT,<br>INDEX <code>userID</code> (<code>userID</code>) USING BTREE ,<br>INDEX <code>bankID</code> (<code>bankID</code>) USING BTREE<br>)<br>ENGINE=InnoDB<br>DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci<br>ROW_FORMAT=COMPACT<br>;</p>
+<p>deposit表</p>
+<p>CREATE TABLE <code>NewTable</code> (<br><code>id</code>  int(30) NOT NULL AUTO_INCREMENT COMMENT ‘序号’ ,<br><code>idCard</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘卡号’ ,<br><code>dtime</code>  timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT ‘存款时间’ ,<br><code>dmoney</code>  decimal(10,0) NOT NULL COMMENT ‘金额’ ,<br><code>atmID</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘设备号’ ,<br><code>mID</code>  varchar(250) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘冠字号’ ,<br>PRIMARY KEY (<code>id</code>),<br>FOREIGN KEY (<code>idCard</code>) REFERENCES <code>bankcard</code> (<code>idCard</code>) ON DELETE RESTRICT ON UPDATE RESTRICT,<br>FOREIGN KEY (<code>atmID</code>) REFERENCES <code>atm</code> (<code>atmID</code>) ON DELETE RESTRICT ON UPDATE RESTRICT,<br>INDEX <code>idCard</code> (<code>idCard</code>) USING BTREE ,<br>INDEX <code>atmID</code> (<code>atmID</code>) USING BTREE<br>)<br>ENGINE=InnoDB<br>DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci<br>AUTO_INCREMENT=6<br>ROW_FORMAT=COMPACT<br>;</p>
+<p>CREATE DEFINER=<code>root</code>@<code>localhost</code> TRIGGER <code>in</code> AFTER INSERT ON <code>NewTable</code><br>FOR EACH ROW begin<br>insert into receipt(idCard,type,money,time,atmID,mID)<br>values(new.idCard,’存款’,new.dmoney,new.dtime,new.atmID,new.mID);<br>update bankcard set balance = balance + new.dmoney where idCard = new.idCard;<br>end;</p>
+<p>province表</p>
+<p>CREATE TABLE <code>NewTable</code> (<br><code>provinceID</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘省份ID’ ,<br><code>province</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘省份名称’ ,<br>PRIMARY KEY (<code>provinceID</code>),<br>INDEX <code>province</code> (<code>province</code>) USING BTREE<br>)<br>ENGINE=InnoDB<br>DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci<br>ROW_FORMAT=COMPACT<br>;</p>
+<p>receipt表</p>
+<p>CREATE TABLE <code>NewTable</code> (<br><code>id</code>  int(30) NOT NULL AUTO_INCREMENT ,<br><code>idCard</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘卡号’ ,<br><code>type</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘交易类型’ ,<br><code>money</code>  decimal(30,0) NOT NULL COMMENT ‘金额’ ,<br><code>time</code>  datetime NOT NULL COMMENT ‘时间’ ,<br><code>atmID</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘设备号’ ,<br><code>mID</code>  varchar(250) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘冠字号’ ,<br>PRIMARY KEY (<code>id</code>)<br>)<br>ENGINE=InnoDB<br>DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci<br>AUTO_INCREMENT=17<br>ROW_FORMAT=COMPACT<br>;</p>
+<p>region表</p>
+<p>CREATE TABLE <code>NewTable</code> (<br><code>areaID</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘地区ID’ ,<br><code>area</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘地区名称’ ,<br>PRIMARY KEY (<code>areaID</code>)<br>)<br>ENGINE=InnoDB<br>DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci<br>ROW_FORMAT=COMPACT<br>;</p>
+<p>transfer表</p>
+<p>CREATE TABLE <code>NewTable</code> (<br><code>id</code>  int(30) NOT NULL AUTO_INCREMENT COMMENT ‘序号’ ,<br><code>idCard</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘卡号’ ,<br><code>tbankID</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘交易卡号’ ,<br><code>ttime</code>  timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT ‘转账时间’ ,<br><code>tmoney</code>  decimal(10,0) NOT NULL COMMENT ‘转账金额’ ,<br><code>ttype</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘转账类型’ ,<br><code>cost</code>  decimal(10,0) NOT NULL COMMENT ‘手续费’ ,<br><code>atmID</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘设备号’ ,<br><code>mID</code>  varchar(250) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘冠字号’ ,<br>PRIMARY KEY (<code>id</code>),<br>FOREIGN KEY (<code>idCard</code>) REFERENCES <code>bankcard</code> (<code>idCard</code>) ON DELETE RESTRICT ON UPDATE RESTRICT,<br>FOREIGN KEY (<code>atmID</code>) REFERENCES <code>atm</code> (<code>atmID</code>) ON DELETE RESTRICT ON UPDATE RESTRICT,<br>INDEX <code>idCard</code> (<code>idCard</code>) USING BTREE ,<br>INDEX <code>atmID</code> (<code>atmID</code>) USING BTREE<br>)<br>ENGINE=InnoDB<br>DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci<br>AUTO_INCREMENT=9<br>ROW_FORMAT=COMPACT<br>;</p>
+<p>CREATE DEFINER=<code>root</code>@<code>localhost</code> TRIGGER <code>trans</code> AFTER INSERT ON <code>NewTable</code><br>FOR EACH ROW begin<br>update bankcard set balance = balance + new.tmoney where idCard = new.tbankID;<br>update bankcard set balance = balance - new.tmoney - new.cost where idCard = new.idCard;<br>if new.ttype=0<br>then<br>insert into receipt(idCard,type,money,time,atmID,mID)<br>values(new.idCard,’同行转账’,new.tmoney,new.ttime,new.atmID,new.mID);<br>end if;<br>if new.ttype=1<br>then<br>insert into receipt(idCard,type,money,time,atmID,mID)<br>values(new.idCard,’行外转账’,new.tmoney,new.ttime,new.atmID,new.mID);<br>insert into receipt(idCard,type,money,time,atmID,mID)<br>values(new.idCard,’转账手续费’,new.cost,new.ttime,new.atmID,new.mID);<br>end if;<br>end;</p>
+<p>user表</p>
+<p>CREATE TABLE <code>NewTable</code> (<br><code>userID</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘用户ID’ ,<br><code>name</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘姓名’ ,<br><code>sex</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘性别’ ,<br><code>age</code>  int(30) NOT NULL COMMENT ‘年龄’ ,<br><code>provinceID</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘省份ID’ ,<br><code>areaID</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘地区ID’ ,<br>PRIMARY KEY (<code>userID</code>),<br>INDEX <code>provinceID</code> (<code>provinceID</code>) USING BTREE ,<br>INDEX <code>areaID</code> (<code>areaID</code>) USING BTREE<br>)<br>ENGINE=InnoDB<br>DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci<br>ROW_FORMAT=COMPACT<br>;</p>
+<p>withdrawal表</p>
+<p>CREATE TABLE <code>NewTable</code> (<br><code>id</code>  int(30) NOT NULL AUTO_INCREMENT COMMENT ‘序号’ ,<br><code>idCard</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘卡号’ ,<br><code>wtime</code>  timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT ‘取款时间’ ,<br><code>wmoney</code>  decimal(10,0) NOT NULL COMMENT ‘金额’ ,<br><code>atmID</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘设备号’ ,<br><code>mID</code>  varchar(250) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘冠字号’ ,<br>PRIMARY KEY (<code>id</code>),<br>FOREIGN KEY (<code>idCard</code>) REFERENCES <code>bankcard</code> (<code>idCard</code>) ON DELETE RESTRICT ON UPDATE RESTRICT,<br>FOREIGN KEY (<code>atmID</code>) REFERENCES <code>atm</code> (<code>atmID</code>) ON DELETE RESTRICT ON UPDATE RESTRICT,<br>INDEX <code>idCard</code> (<code>idCard</code>) USING BTREE ,<br>INDEX <code>atmID</code> (<code>atmID</code>) USING BTREE<br>)<br>ENGINE=InnoDB<br>DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci<br>AUTO_INCREMENT=3<br>ROW_FORMAT=COMPACT<br>;</p>
+<p>CREATE DEFINER=<code>root</code>@<code>localhost</code> TRIGGER <code>out</code> AFTER INSERT ON <code>NewTable</code><br>FOR EACH ROW begin<br>insert into receipt(idCard,type,money,time,atmID,mID)<br>values(new.idCard,’取款’,new.wmoney,new.wtime,new.atmID,new.mID);<br>update bankcard set balance = balance - new.wmoney where idCard = new.idCard;<br>end;</p>
+<p>2.导入Jar包</p>
+<p>mysql-connector-java-5.1.37-bin</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/19/%E9%93%B6%E8%A1%8CATM%E6%9C%BAjava%20swing%E5%AE%9E%E7%8E%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-利用jdbc mysql简单实现职员管理系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -487,7 +687,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 miracle_DZL
+    		&copy; 2020 miracle_DZL
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
