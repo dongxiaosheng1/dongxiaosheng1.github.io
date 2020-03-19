@@ -10,15 +10,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>银行ATM机java swing实现 | miracle_DZL的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JAVA Swing JDBC 实现银行ATM机（1）编写ATM机，实现ATM机的登录，查询，打印凭条，存款，取款，转账等功能 后台有ATM管路，和银行卡管理 采用mysql数据库 druid连接池 JDBC JFrame navicat">
+  <meta name="description" content="JAVA Swing JDBC 实现银行ATM机（1）编写ATM机，实现ATM机的登录，查询，打印凭条，存款，取款，转账等功能 后台有ATM管路，和银行卡管理">
 <meta name="keywords" content="java web python 考研 算法 数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="银行ATM机java swing实现">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;19&#x2F;%E9%93%B6%E8%A1%8CATM%E6%9C%BAjava%20swing%E5%AE%9E%E7%8E%B0&#x2F;index.html">
 <meta property="og:site_name" content="miracle_DZL的博客">
-<meta property="og:description" content="JAVA Swing JDBC 实现银行ATM机（1）编写ATM机，实现ATM机的登录，查询，打印凭条，存款，取款，转账等功能 后台有ATM管路，和银行卡管理 采用mysql数据库 druid连接池 JDBC JFrame navicat">
+<meta property="og:description" content="JAVA Swing JDBC 实现银行ATM机（1）编写ATM机，实现ATM机的登录，查询，打印凭条，存款，取款，转账等功能 后台有ATM管路，和银行卡管理">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-19T01:48:10.391Z">
+<meta property="og:updated_time" content="2020-03-19T09:42:37.447Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="miracle_DZL的博客" type="application/atom+xml">
@@ -172,8 +172,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="JAVA-Swing-JDBC-实现银行ATM机（1）"><a href="#JAVA-Swing-JDBC-实现银行ATM机（1）" class="headerlink" title="JAVA Swing JDBC 实现银行ATM机（1）"></a>JAVA Swing JDBC 实现银行ATM机（1）</h2><p>编写ATM机，实现ATM机的登录，查询，打印凭条，存款，取款，转账等功能</p>
-<p>后台有ATM管路，和银行卡管理</p>
-<p>采用mysql数据库 druid连接池 JDBC JFrame navicat<a id="more"></a></p>
+<p>后台有ATM管路，和银行卡管理<a id="more"></a></p>
+<p>采用mysql数据库 druid连接池 JDBC JFrame navicat</p>
 <p>1.建数据库表</p>
 <p>atm表</p>
 <p>CREATE TABLE <code>NewTable</code> (<br><code>atmID</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ‘机号’ ,<br><code>astate</code>  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT ‘运行’ COMMENT ‘状态’ ,<br><code>atmBalance</code>  decimal(30,0) NOT NULL DEFAULT 0 COMMENT ‘ATM余额’ ,<br>PRIMARY KEY (<code>atmID</code>)<br>)<br>ENGINE=InnoDB<br>DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci<br>ROW_FORMAT=COMPACT<br>;</p>
