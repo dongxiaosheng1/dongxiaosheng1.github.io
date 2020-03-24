@@ -8,17 +8,60 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | miracle_DZL的博客</title>
+  <title>导数与微分 | miracle_DZL的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我爱学习，学习爱我">
+  <meta name="description" content="导数与微分的理解[TOC] 首先高数课本上导数的定义：">
 <meta name="keywords" content="java web python 考研 算法 数据结构">
-<meta property="og:type" content="website">
-<meta property="og:title" content="miracle_DZL的博客">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="导数与微分">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;24&#x2F;%E5%AF%BC%E6%95%B0%E4%B8%8E%E5%BE%AE%E5%88%86&#x2F;index.html">
 <meta property="og:site_name" content="miracle_DZL的博客">
-<meta property="og:description" content="我爱学习，学习爱我">
+<meta property="og:description" content="导数与微分的理解[TOC] 首先高数课本上导数的定义：">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http:&#x2F;&#x2F;q7e5szr7k.bkt.clouddn.com&#x2F;blog&#x2F;20200324&#x2F;3LhVkBRIwBYy.png?imageslim">
+<meta property="og:image" content="http:&#x2F;&#x2F;q7e5szr7k.bkt.clouddn.com&#x2F;blog&#x2F;20200324&#x2F;IzonWgSeNOtt.png?imageslim">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=y%3Df%28x%29">
+<meta property="og:image" content="https:&#x2F;&#x2F;pic3.zhimg.com&#x2F;7a309c5ac7d603626f6fc252bd3176a6_b.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=n">
+<meta property="og:image" content="https:&#x2F;&#x2F;pic1.zhimg.com&#x2F;5396faefd2f3501c287903faf98600d0_b.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;pic3.zhimg.com&#x2F;c628daac6d6219eadca61396aa853ebe_b.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;pic2.zhimg.com&#x2F;80&#x2F;88c4a488ae041a39da5c1e4892c6a055_720w.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;pic2.zhimg.com&#x2F;3c7eb94341181775449815dddb9a6d51_b.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=f%27%28x%29%3D%5Cfrac%7Bdy%7D%7Bdx%7D">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=dx">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=dy">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=x">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=y">
+<meta property="og:image" content="https:&#x2F;&#x2F;pic1.zhimg.com&#x2F;61ecf4ae56111a5aece4888318c231fc_b.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=x%5E2">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=%5Cbegin%7Balign%7D++%5Cfrac%7Bd%7D%7Bdx%7D%28x%5E2%29+%26++%3D+%5Cfrac%7Bf%28x%2Bdx%29-f%28x%29%7D%7Bdx%7D+%5C%5C+%26++%3D+%5Cfrac%7B%28x%2Bdx%29%5E2-x%5E2%7D%7Bdx%7D+%5C%5C+%26++%3D+%5Cfrac%7Bx%5E2%2B2xdx%2Bdx%5E2-x%5E2%7D%7Bdx%7D+%5C%5C+%26++%3D+%5Cfrac%7B2xdx%2Bdx%5E2%7D%7Bdx%7D+%5C%5C+%26++%3D+2x%2Bdx+%5C%5C+%26++%3D+2x+%5Cend%7Balign%7D">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=dx">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=%5Cepsilon+-%5Cdelta+">
+<meta property="og:image" content="https:&#x2F;&#x2F;pic4.zhimg.com&#x2F;0afe3d0aafd33781261c35f90f085a07_b.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=%5Cbegin%7Balign%7D++%5Cdisplaystyle+f%27%28x_0%29%26+%3D%5Cfrac%7Bdy%7D%7Bdx%7D%5C%5C+%26+%3D%5Clim+_%7B%5CDelta+x+%5Cto+0%7D%5Cfrac%7B%5CDelta+y%7D%7B%5CDelta+x%7D%5C%5C+%26+%3D%5Clim+_%7B%5CDelta+x+%5Cto+0%7D%5Cfrac%7Bf%28x_0%2B%5CDelta+x%29-f%28x_0%29%7D%7B%5CDelta+x%7D+%5Cend%7Balign%7D">
+<meta property="og:image" content="http:&#x2F;&#x2F;q7e5szr7k.bkt.clouddn.com&#x2F;blog&#x2F;20200324&#x2F;h2LpukCxGK4Y.png?imageslim">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=%5CDelta+y%3Df%27%28x_0%29%5CDelta+x%2Ba%5CDelta+x">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=%5CDelta+y">
+<meta property="og:image" content="https:&#x2F;&#x2F;pic3.zhimg.com&#x2F;38aa32221424bf6a6c924080ac9ecba6_b.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=dy%3Df%27%28x%29%5CDelta+x">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=dy">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=y%3Dx%5Cimplies+dy%3D1%5CDelta+x%5Cimplies+dx%3D%5CDelta+x">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=dx">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=dy%3Df%27%28x%29dx%5Cimplies+%5Cfrac%7Bdy%7D%7Bdx%7D%3Df%27%28x%29">
+<meta property="og:image" content="https:&#x2F;&#x2F;pic1.zhimg.com&#x2F;96748e87494305f0274d0921a7d17484_b.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=%5Cfrac%7Bdy%7D%7Bdx%7D%3D%5Cfrac%7Bdy%7D%7Bdu%7D%5Cfrac%7Bdu%7D%7Bdx%7D">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=du">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=%5Cint+_+a%5E+b+%5Cfrac%7Bdy%7D%7Bdx%7Ddx">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=dx">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=%5Cint+_+a%5E+b+dx">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=%5Cint+_+a%5E+b">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=dx">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=%282%2B6%29%3D8">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=d%28uv%29%3D%28u%2Bdu%29%28v%2Bdv%29-uv%3Dudv%2Bvdu%2Bdudv">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.zhihu.com&#x2F;equation?tex=dudv">
+<meta property="og:updated_time" content="2020-03-24T03:24:26.453Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;q7e5szr7k.bkt.clouddn.com&#x2F;blog&#x2F;20200324&#x2F;3LhVkBRIwBYy.png?imageslim">
   
     <link rel="alternative" href="/atom.xml" title="miracle_DZL的博客" type="application/atom+xml">
   
@@ -153,184 +196,234 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-导数与微分" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      导数与微分
+    </h1>
+  
+
+        
+        <a href="/2020/03/24/%E5%AF%BC%E6%95%B0%E4%B8%8E%E5%BE%AE%E5%88%86/" class="archive-article-date">
+  	<time datetime="2020-03-24T02:05:01.863Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-24</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="导数与微分的理解"><a href="#导数与微分的理解" class="headerlink" title="导数与微分的理解"></a>导数与微分的理解</h2><p>[TOC]</p>
+<h3 id="首先高数课本上导数的定义："><a href="#首先高数课本上导数的定义：" class="headerlink" title="首先高数课本上导数的定义："></a>首先高数课本上导数的定义：<a id="more"></a></h3><p><img src="http://q7e5szr7k.bkt.clouddn.com/blog/20200324/3LhVkBRIwBYy.png?imageslim" alt="mark"></p>
+<h3 id="微分的定义："><a href="#微分的定义：" class="headerlink" title="微分的定义："></a>微分的定义：</h3><p><img src="http://q7e5szr7k.bkt.clouddn.com/blog/20200324/IzonWgSeNOtt.png?imageslim" alt="mark"></p>
+<p>个人总觉得难懂，遇上上网寻找答案，找到知乎上一回答，对我很有启发。特此借鉴</p>
+<p>其内容如下</p>
+<h3 id="微积分发展的历史和数学思想，主要针对-这样的一元函数。"><a href="#微积分发展的历史和数学思想，主要针对-这样的一元函数。" class="headerlink" title="微积分发展的历史和数学思想，主要针对  这样的一元函数。"></a>微积分发展的历史和数学思想，主要针对 <img src="https://www.zhihu.com/equation?tex=y%3Df%28x%29" alt="[公式]"> 这样的一元函数。</h3><h4 id="1-牛顿、莱布尼兹开始的古典微积分"><a href="#1-牛顿、莱布尼兹开始的古典微积分" class="headerlink" title="1 牛顿、莱布尼兹开始的古典微积分"></a><strong>1 牛顿、莱布尼兹开始的古典微积分</strong></h4><p>牛顿和莱布尼兹各自独立发明了微积分，下面我采取莱布尼兹的微积分符号进行说明（要了解各种微积分符号，可以参看 <a href="https://link.zhihu.com/?target=https%3A//zh.wikipedia.org/wiki/%25E5%25AF%25BC%25E6%2595%25B0">—-维基百科</a> ）。</p>
+<h5 id="1-1-导数为什么出现？"><a href="#1-1-导数为什么出现？" class="headerlink" title="1.1 导数为什么出现？"></a><strong>1.1 导数为什么出现？</strong></h5><p>导数的出现不是牛顿和莱布尼兹发明的，之前数学家已经在对曲线的切线进行研究了，但是牛顿和莱布尼兹在解决曲面下面积的时候把导数的定义确定下来了。</p>
+<p>曲线下的面积在微积分出现之前是一个很复杂的问题，微积分求解的主要思想是把曲线下的面积划分成了无数个矩形面积之和：</p>
+<p><img src="https://pic3.zhimg.com/7a309c5ac7d603626f6fc252bd3176a6_b.png" alt="img"></p>
+<p>直觉告诉我们，如果 <img src="https://www.zhihu.com/equation?tex=n" alt="[公式]"> 越大，则这个近似越准确：</p>
+<p><img src="https://pic1.zhimg.com/5396faefd2f3501c287903faf98600d0_b.png" alt="img"></p>
+<p>无穷小量就在这里出现了，无穷小量是建立微积分的基础，莱布尼兹介绍微积分的论文就叫做《论深度隐藏的几何学及无穷小与无穷大的分析》。在当时的观点下，无穷小量到底是什么也是有争论的，当时有数学家打比喻：“无穷小量就好比山上的灰尘，去掉和增加都没有什么影响”，很显然有人认为这是真实存在的。</p>
+<p>在具体计算曲面下面积，即我们现在所说的定积分的时候，必然会遇到导数的问题，所以很自然的开始了对导数的定义和讨论。</p>
+<h5 id="1-2-导数的古典定义"><a href="#1-2-导数的古典定义" class="headerlink" title="1.2 导数的古典定义"></a><strong>1.2 导数的古典定义</strong></h5><p>在曲线上取两点，连接起来，就称为曲线的割线：</p>
+<p><img src="https://pic3.zhimg.com/c628daac6d6219eadca61396aa853ebe_b.png" alt="img"></p>
+<p>割线可以反应曲线的平均变化率，也就是说这一段大概总的趋势是上升还是下降，上升了多少，但是并不精确。</p>
+<p><img src="https://pic2.zhimg.com/80/88c4a488ae041a39da5c1e4892c6a055_720w.png" alt="img"></p>
+<p>有了切线之后我们进一步去定义导数：</p>
+<p><img src="https://pic2.zhimg.com/3c7eb94341181775449815dddb9a6d51_b.png" alt="img"></p>
+<p>从这张图得出导数的定义 <img src="https://www.zhihu.com/equation?tex=f%27%28x%29%3D%5Cfrac%7Bdy%7D%7Bdx%7D" alt="[公式]"> ，而 <img src="https://www.zhihu.com/equation?tex=dx" alt="[公式]"> 和 <img src="https://www.zhihu.com/equation?tex=dy" alt="[公式]"> 被称为 <img src="https://www.zhihu.com/equation?tex=x" alt="[公式]"> 和 <img src="https://www.zhihu.com/equation?tex=y" alt="[公式]"> 的微分，都为无穷小量，所以导数也被莱布尼兹称为微商（微分之商)。</p>
+<h5 id="1-3-无穷小量导致的麻烦"><a href="#1-3-无穷小量导致的麻烦" class="headerlink" title="1.3 无穷小量导致的麻烦"></a><strong>1.3 无穷小量导致的麻烦</strong></h5><p>上一节的图实际上是有矛盾的：</p>
+<p><img src="https://pic1.zhimg.com/61ecf4ae56111a5aece4888318c231fc_b.png" alt="img"></p>
+<p>所以就切线的定义而言，微积分的基础就是不牢固的。</p>
+<p>无穷小量的麻烦还远远不止这一些， <img src="https://www.zhihu.com/equation?tex=x%5E2" alt="[公式]"> 的导数是这样计算的：</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cbegin%7Balign%7D++%5Cfrac%7Bd%7D%7Bdx%7D%28x%5E2%29+%26++%3D+%5Cfrac%7Bf%28x%2Bdx%29-f%28x%29%7D%7Bdx%7D+%5C%5C+%26++%3D+%5Cfrac%7B%28x%2Bdx%29%5E2-x%5E2%7D%7Bdx%7D+%5C%5C+%26++%3D+%5Cfrac%7Bx%5E2%2B2xdx%2Bdx%5E2-x%5E2%7D%7Bdx%7D+%5C%5C+%26++%3D+%5Cfrac%7B2xdx%2Bdx%5E2%7D%7Bdx%7D+%5C%5C+%26++%3D+2x%2Bdx+%5C%5C+%26++%3D+2x+%5Cend%7Balign%7D" alt="[公式]"></p>
+<p>仔细看看运算过程， <img src="https://www.zhihu.com/equation?tex=dx" alt="[公式]"> 先是在约分中被约掉，然后又在加法中被忽略，就是说，先被当作了非0的量，又被当作了0，这就是大主教贝克莱（就是在高中政治书被嘲笑的唯心主义的代表）所攻击的像幽灵一样的数，一会是0一会又不是0。</p>
+<p>无穷小量和无穷小量相除为什么可以得到不一样的值？难道不应该都是1？</p>
+<p>无穷小量还违反了 <a href="https://link.zhihu.com/?target=https%3A//zh.wikipedia.org/wiki/%25E9%2598%25BF%25E5%259F%25BA%25E7%25B1%25B3%25E5%25BE%25B7%25E5%2585%25AC%25E7%2590%2586">阿基米德公理</a> ，这个才是更严重的缺陷，康托尔证明过，如果阿基米德公理被违背的话会出大问题。</p>
+<p>一边是看起来没有错的微积分，一边是有严重缺陷的无穷小量，这就是第二次数学危机。数学的严格性受到了挑战，“对于数学，严格性不是一切，但是没有了严格性就没有了一切”。</p>
+<h5 id="1-4-对于古典微积分的总结"><a href="#1-4-对于古典微积分的总结" class="headerlink" title="1.4 对于古典微积分的总结"></a><strong>1.4 对于古典微积分的总结</strong></h5><ul>
+<li>切线：通过无穷小量定义了切线</li>
+<li>导数：导数就是切线的斜率</li>
+<li>微分：微分是微小的增量，即无穷小量</li>
+</ul>
+<h4 id="2-基于极限重建微积分"><a href="#2-基于极限重建微积分" class="headerlink" title="2 基于极限重建微积分"></a><strong>2 基于极限重建微积分</strong></h4><p>莱布尼兹、欧拉等都认识到了无穷小量导致的麻烦，一直拼命想要修补，但是这个问题要等到200年后，19世纪极限概念的清晰之后才得到解决。</p>
+<p>解决办法是，完全摈弃无穷小量，基于极限的概念，重新建立了微积分。</p>
+<h5 id="2-1-极限"><a href="#2-1-极限" class="headerlink" title="2.1 极限"></a><strong>2.1 极限</strong></h5><p>现在都是用 <img src="https://www.zhihu.com/equation?tex=%5Cepsilon+-%5Cdelta+" alt="[公式]"> 语言来描述极限：</p>
+<p><img src="https://pic4.zhimg.com/0afe3d0aafd33781261c35f90f085a07_b.png" alt="img"></p>
+<p>可以看到，极限的描述并没有用到什么无穷小量。</p>
+<h5 id="2-2-导数的极限定义"><a href="#2-2-导数的极限定义" class="headerlink" title="2.2 导数的极限定义"></a><strong>2.2 导数的极限定义</strong></h5><blockquote>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cbegin%7Balign%7D++%5Cdisplaystyle+f%27%28x_0%29%26+%3D%5Cfrac%7Bdy%7D%7Bdx%7D%5C%5C+%26+%3D%5Clim+_%7B%5CDelta+x+%5Cto+0%7D%5Cfrac%7B%5CDelta+y%7D%7B%5CDelta+x%7D%5C%5C+%26+%3D%5Clim+_%7B%5CDelta+x+%5Cto+0%7D%5Cfrac%7Bf%28x_0%2B%5CDelta+x%29-f%28x_0%29%7D%7B%5CDelta+x%7D+%5Cend%7Balign%7D" alt="[公式]">维基百科</p>
+</blockquote>
+<p>用极限重新严格定义了导数，已经脱离了微商的概念，此时，导数应该被看成一个整体。</p>
+<p>不过我们仍然可以去定义什么是微分，说到这里，真是有点剧情反转，原来是先定义了微分再有的导数，现在却是先定义了导数再有的微分。</p>
+<p><img src="http://q7e5szr7k.bkt.clouddn.com/blog/20200324/h2LpukCxGK4Y.png?imageslim" alt="mark"></p>
+<p><img src="https://www.zhihu.com/equation?tex=%5CDelta+y%3Df%27%28x_0%29%5CDelta+x%2Ba%5CDelta+x" alt="[公式]"> 可以得出， <img src="https://www.zhihu.com/equation?tex=%5CDelta+y" alt="[公式]"> 由两部分组成，通过图来观察一下几何意义：</p>
+<p><img src="https://pic3.zhimg.com/38aa32221424bf6a6c924080ac9ecba6_b.png" alt="img">![img]</p>
+<p><img src="https://www.zhihu.com/equation?tex=dy%3Df%27%28x%29%5CDelta+x" alt="[公式]"> ，这是 <img src="https://www.zhihu.com/equation?tex=dy" alt="[公式]"> 的定义。</p>
+<p>我们令 <img src="https://www.zhihu.com/equation?tex=y%3Dx%5Cimplies+dy%3D1%5CDelta+x%5Cimplies+dx%3D%5CDelta+x" alt="[公式]"> ，这个 <img src="https://www.zhihu.com/equation?tex=dx" alt="[公式]"> 的定义。</p>
+<p>最后我们可以得到 <img src="https://www.zhihu.com/equation?tex=dy%3Df%27%28x%29dx%5Cimplies+%5Cfrac%7Bdy%7D%7Bdx%7D%3Df%27%28x%29" alt="[公式]"> ：</p>
+<p><img src="https://pic1.zhimg.com/96748e87494305f0274d0921a7d17484_b.png" alt="img"></p>
+<h5 id="2-3-对于极限微积分的总结"><a href="#2-3-对于极限微积分的总结" class="headerlink" title="2.3 对于极限微积分的总结"></a><strong>2.3 对于极限微积分的总结</strong></h5><ul>
+<li>导数：被定义为一个极限，其意义就是变化率</li>
+<li>微分：是一个线性函数，其意义就是变化的具体数值</li>
+<li>切线：有了导数之后就可以被确定下来了</li>
+</ul>
+<h4 id="3-疑问的解答"><a href="#3-疑问的解答" class="headerlink" title="3 疑问的解答"></a><strong>3 疑问的解答</strong></h4><p>微积分实际上被发明了两次，古典微积分和极限微积分可以说是两个东西。我们再来比较一下古典微积分和极限微积分。</p>
+<h5 id="3-1-古典微积分与极限微积分的对比"><a href="#3-1-古典微积分与极限微积分的对比" class="headerlink" title="3.1 古典微积分与极限微积分的对比"></a><strong>3.1 古典微积分与极限微积分的对比</strong></h5><ul>
+<li>古典微积分是先定义微分再定义导数，极限微积分是先定义导数再定义微分。</li>
+<li>古典微积分的导数是基于无穷小量定义的，极限微积分的导数是基于极限定义的。</li>
+<li>古典微积分的微分是无穷小量，极限微积分的微分是一个线性函数。</li>
+<li>古典微积分的定积分是求无穷小矩形面积的和，极限微积分的定积分是求黎曼和。</li>
+<li>古典微积分的切线是可以画出来的，极限微积分的切线是算出来的。</li>
+<li>古典微积分的建立过程很直观，极限微积分的建立过程更抽象。</li>
+</ul>
+<p>古典微积分最大的好处就是很直观，不过也是因为太直观了，所以我们一直都无法忘记它带来的印象，也对我们理解极限微积分造成了障碍。也让我们在实际应用中造成了错误的理解。</p>
+<h5 id="3-2-疑问的解答"><a href="#3-2-疑问的解答" class="headerlink" title="3.2 疑问的解答"></a><strong>3.2 疑问的解答</strong></h5><p>之前的疑惑主要是由于古典微积分带来的。</p>
+<ul>
+<li><img src="https://www.zhihu.com/equation?tex=%5Cfrac%7Bdy%7D%7Bdx%7D%3D%5Cfrac%7Bdy%7D%7Bdu%7D%5Cfrac%7Bdu%7D%7Bdx%7D" alt="[公式]"> ，在古典微积分中可以理解为消去，但是在极限微积分中我们应该认识到，这两个 <img src="https://www.zhihu.com/equation?tex=du" alt="[公式]"> 实际上是不同的函数。</li>
+<li><img src="https://www.zhihu.com/equation?tex=%5Cint+_+a%5E+b+%5Cfrac%7Bdy%7D%7Bdx%7Ddx" alt="[公式]"> 古典微积分中， <img src="https://www.zhihu.com/equation?tex=dx" alt="[公式]"> 确实表明是无穷多个矩形的底边，消去也是合理的，而极限微积分中， <img src="https://www.zhihu.com/equation?tex=%5Cint+_+a%5E+b+dx" alt="[公式]"> 是求黎曼和，我们可以把 <img src="https://www.zhihu.com/equation?tex=%5Cint+_+a%5E+b" alt="[公式]"> 当作左括号， <img src="https://www.zhihu.com/equation?tex=dx" alt="[公式]"> 当作右括号，就好比 <img src="https://www.zhihu.com/equation?tex=%282%2B6%29%3D8" alt="[公式]"> ，计算完毕之后，括号自然就消失了。</li>
+<li><img src="https://www.zhihu.com/equation?tex=d%28uv%29%3D%28u%2Bdu%29%28v%2Bdv%29-uv%3Dudv%2Bvdu%2Bdudv" alt="[公式]"> 在古典微积分中这么计算没有错误，只是 <img src="https://www.zhihu.com/equation?tex=dudv" alt="[公式]"> 的消去也是不严谨的，而极限微积分中应该重新用极限的方法进行证明，这里不再列出。</li>
+</ul>
+<p>古典微积分其实已经被摒弃了，我们应该知道这一点，重新从极限的角度去认识微积分。</p>
+<h5 id="3-3-古典微积分的用处"><a href="#3-3-古典微积分的用处" class="headerlink" title="3.3 古典微积分的用处"></a><strong>3.3 古典微积分的用处</strong></h5><p>我们应该从古典微积分，以直代曲、化整为零的数学思想出发去开始认识微积分。</p>
+<p>并且，莱布尼兹一直认为数学符号应该具有启发性，他设计的微积分符号确实很符合直觉，我们可以继续借用他的符号来描述微积分。</p>
+<h4 id="4-无穷小量的逆袭"><a href="#4-无穷小量的逆袭" class="headerlink" title="4 无穷小量的逆袭"></a><strong>4 无穷小量的逆袭</strong></h4><p>有的数学家还是对无穷小量念念不忘，最后真的发明了既可以兼容无穷小量又不会出现问题的实数， <a href="https://link.zhihu.com/?target=https%3A//zh.wikipedia.org/wiki/%25E8%25B6%2585%25E5%25AE%259E%25E6%2595%25B0_%28%25E9%259D%259E%25E6%25A0%2587%25E5%2587%2586%25E5%2588%2586%25E6%259E%2590%29">超实数</a> 。</p>
+<p>基于超实数，数学家又重新定义了微积分，这次定义的微积分又很像莱布尼兹时代的微积分。这门学科被称为非标准分析（对应的，基于我们没有无穷小量的实数体系的微积分，就是标准分析）。我对于超实数并不了解，大家感兴趣可以去学习非标准分析课程。</p>
+<p>链接：<a href="https://www.zhihu.com/question/22199657/answer/115178055" target="_blank" rel="noopener">https://www.zhihu.com/question/22199657/answer/115178055</a></p>
+<p>来源：知乎</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/19/%E9%93%B6%E8%A1%8CATM%E6%9C%BAjava%20swing%E5%AE%9E%E7%8E%B0/" class="archive-article-date">
-  	<time datetime="2019-12-19T13:04:06.273Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/19/%E9%93%B6%E8%A1%8CATM%E6%9C%BAjava%20swing%E5%AE%9E%E7%8E%B0/">银行ATM机java swing实现</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/24/%E5%AF%BC%E6%95%B0%E4%B8%8E%E5%BE%AE%E5%88%86/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/16/%E5%88%A9%E7%94%A8jdbc%20mysql%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E8%81%8C%E5%91%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/" class="archive-article-date">
-  	<time datetime="2019-11-16T11:41:18.370Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-16</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/03/19/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%86%E6%9E%90%EF%BC%88%E4%BA%8C%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">面向对象分析（二）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/16/%E5%88%A9%E7%94%A8jdbc%20mysql%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E8%81%8C%E5%91%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">利用jdbc mysql简单实现职员管理系统</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/07/%E8%B4%AA%E5%BF%83/" class="archive-article-date">
-  	<time datetime="2019-11-07T12:06:37.739Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/07/%E8%B4%AA%E5%BF%83/">贪心</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/07/%E6%97%B6%E9%97%B4%E6%95%88%E7%8E%87%E7%AE%A1%E7%90%86/" class="archive-article-date">
-  	<time datetime="2019-11-07T11:08:51.675Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/07/%E6%97%B6%E9%97%B4%E6%95%88%E7%8E%87%E7%AE%A1%E7%90%86/">时间效率管理</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/04/2.1%E9%80%92%E5%BD%92/" class="archive-article-date">
-  	<time datetime="2019-11-04T13:46:57.720Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/04/2.1%E9%80%92%E5%BD%92/">2.1递归</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/28/%E5%9B%A0%E4%B8%BA%E7%83%AD%E7%88%B1/" class="archive-article-date">
-  	<time datetime="2019-10-28T12:05:11.304Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/28/%E5%9B%A0%E4%B8%BA%E7%83%AD%E7%88%B1/">因为热爱</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -353,8 +446,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
