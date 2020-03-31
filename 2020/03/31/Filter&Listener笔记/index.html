@@ -10,15 +10,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Filter&amp;Listener笔记 | miracle_DZL的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今日内容1. Filter：过滤器 2. Listener：监听器Filter：过滤器1. 概念：     * 生活中的过滤器：净水器,空气净化器，土匪、     * web中的过滤器：当访问服务器的资源时，过滤器可以将请求拦截下来，完成一些特殊的功能。     * 过滤器的作用：         * 一般用于完成通用的操作。如：登录验证、统一编码处理、敏感字符过滤...  2. 快速入门：">
+  <meta name="description" content="今日内容1. Filter：过滤器 2. Listener：监听器Filter：过滤器">
 <meta name="keywords" content="java web python 考研 算法 数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Filter&amp;Listener笔记">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;31&#x2F;Filter&amp;Listener%E7%AC%94%E8%AE%B0&#x2F;index.html">
 <meta property="og:site_name" content="miracle_DZL的博客">
-<meta property="og:description" content="今日内容1. Filter：过滤器 2. Listener：监听器Filter：过滤器1. 概念：     * 生活中的过滤器：净水器,空气净化器，土匪、     * web中的过滤器：当访问服务器的资源时，过滤器可以将请求拦截下来，完成一些特殊的功能。     * 过滤器的作用：         * 一般用于完成通用的操作。如：登录验证、统一编码处理、敏感字符过滤...  2. 快速入门：">
+<meta property="og:description" content="今日内容1. Filter：过滤器 2. Listener：监听器Filter：过滤器">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-21T10:11:26.953Z">
+<meta property="og:updated_time" content="2020-03-31T00:04:44.160Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="miracle_DZL的博客" type="application/atom+xml">
@@ -175,7 +175,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="今日内容"><a href="#今日内容" class="headerlink" title="今日内容"></a>今日内容</h2><pre><code>1. Filter：过滤器
-2. Listener：监听器</code></pre><h1 id="Filter：过滤器"><a href="#Filter：过滤器" class="headerlink" title="Filter：过滤器"></a>Filter：过滤器</h1><pre><code>1. 概念：
+2. Listener：监听器</code></pre><h1 id="Filter：过滤器"><a href="#Filter：过滤器" class="headerlink" title="Filter：过滤器"></a>Filter：过滤器<a id="more"></a></h1><pre><code>1. 概念：
     * 生活中的过滤器：净水器,空气净化器，土匪、
     * web中的过滤器：当访问服务器的资源时，过滤器可以将请求拦截下来，完成一些特殊的功能。
     * 过滤器的作用：
@@ -198,13 +198,8 @@
 
             @Override
             public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-                System.out.println(&quot;filterDemo1被执行了....&quot;);
-
-
-                //放行
-                filterChain.doFilter(servletRequest,servletResponse);
-
-            }
+                System.out.println(&quot;filterDemo1被执行了....&quot;);</code></pre><p>​<br>                    //放行<br>                    filterChain.doFilter(servletRequest,servletResponse);</p>
+<pre><code>            }
 
             @Override
             public void destroy() {
@@ -266,42 +261,39 @@
         * 需求：
             1. 访问day17_case案例的资源。验证其是否登录
             2. 如果登录了，则直接放行。
-            3. 如果没有登录，则跳转到登录页面，提示&quot;您尚未登录，请先登录&quot;。
+            3. 如果没有登录，则跳转到登录页面，提示&quot;您尚未登录，请先登录&quot;。</code></pre><p>​    </p>
+<pre><code>2. 案例2_敏感词汇过滤
+    * 需求：
+        1. 对day17_case案例录入的数据进行敏感词汇过滤
+        2. 敏感词汇参考《敏感词汇.txt》
+        3. 如果是敏感词汇，替换为 *** 
+
+    * 分析：
+        1. 对request对象进行增强。增强获取参数相关方法
+        2. 放行。传递代理对象
 
 
+    * 增强对象的功能：
+        * 设计模式：一些通用的解决固定问题的方式
+        1. 装饰模式
+        2. 代理模式
+            * 概念：
+                1. 真实对象：被代理的对象
+                2. 代理对象：
+                3. 代理模式：代理对象代理真实对象，达到增强真实对象功能的目的
+             * 实现方式：
+                 1. 静态代理：有一个类文件描述代理模式
+                 2. 动态代理：在内存中形成代理类
+                    * 实现步骤：
+                        1. 代理对象和真实对象实现相同的接口
+                        2. 代理对象 = Proxy.newProxyInstance();
+                        3. 使用代理对象调用方法。
+                        4. 增强方法
 
-    2. 案例2_敏感词汇过滤
-        * 需求：
-            1. 对day17_case案例录入的数据进行敏感词汇过滤
-            2. 敏感词汇参考《敏感词汇.txt》
-            3. 如果是敏感词汇，替换为 *** 
-
-        * 分析：
-            1. 对request对象进行增强。增强获取参数相关方法
-            2. 放行。传递代理对象
-
-
-        * 增强对象的功能：
-            * 设计模式：一些通用的解决固定问题的方式
-            1. 装饰模式
-            2. 代理模式
-                * 概念：
-                    1. 真实对象：被代理的对象
-                    2. 代理对象：
-                    3. 代理模式：代理对象代理真实对象，达到增强真实对象功能的目的
-                 * 实现方式：
-                     1. 静态代理：有一个类文件描述代理模式
-                     2. 动态代理：在内存中形成代理类
-                        * 实现步骤：
-                            1. 代理对象和真实对象实现相同的接口
-                            2. 代理对象 = Proxy.newProxyInstance();
-                            3. 使用代理对象调用方法。
-                            4. 增强方法
-
-                        * 增强方式：
-                            1. 增强参数列表
-                            2. 增强返回值类型
-                            3. 增强方法体执行逻辑    </code></pre><h2 id="Listener：监听器"><a href="#Listener：监听器" class="headerlink" title="Listener：监听器"></a>Listener：监听器</h2><pre><code>* 概念：web的三大组件之一。
+                    * 增强方式：
+                        1. 增强参数列表
+                        2. 增强返回值类型
+                        3. 增强方法体执行逻辑    </code></pre><h2 id="Listener：监听器"><a href="#Listener：监听器" class="headerlink" title="Listener：监听器"></a>Listener：监听器</h2><pre><code>* 概念：web的三大组件之一。
     * 事件监听机制
         * 事件    ：一件事情
         * 事件源 ：事件发生的地方

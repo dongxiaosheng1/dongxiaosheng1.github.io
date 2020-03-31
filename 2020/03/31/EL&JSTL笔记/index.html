@@ -10,15 +10,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>EL&amp;JSTL笔记 | miracle_DZL的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今日内容1. JSP:     1. 指令     2. 注释     3. 内置对象  2. MVC开发模式 3. EL表达式 4. JSTL标签 5. 三层架构JSP:1. 指令     * 作用：用于配置JSP页面，导入资源文件     * 格式：         &amp;lt;%@ 指令名称 属性名1=属性值1 属性名2=属性值2 ... %&amp;gt;     * 分类：         1. p">
+  <meta name="description" content="今日内容1. JSP:     1. 指令     2. 注释     3. 内置对象 &amp;lt;!-- more --&amp;gt; 2. MVC开发模式 3. EL表达式 4. JSTL标签 5. 三层架构JSP:1. 指令     * 作用：用于配置JSP页面，导入资源文件     * 格式：         &amp;lt;%@ 指令名称 属性名1=属性值1 属性名2=属性值2 ... %&amp;gt;">
 <meta name="keywords" content="java web python 考研 算法 数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="EL&amp;JSTL笔记">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;31&#x2F;EL&amp;JSTL%E7%AC%94%E8%AE%B0&#x2F;index.html">
 <meta property="og:site_name" content="miracle_DZL的博客">
-<meta property="og:description" content="今日内容1. JSP:     1. 指令     2. 注释     3. 内置对象  2. MVC开发模式 3. EL表达式 4. JSTL标签 5. 三层架构JSP:1. 指令     * 作用：用于配置JSP页面，导入资源文件     * 格式：         &amp;lt;%@ 指令名称 属性名1=属性值1 属性名2=属性值2 ... %&amp;gt;     * 分类：         1. p">
+<meta property="og:description" content="今日内容1. JSP:     1. 指令     2. 注释     3. 内置对象 &amp;lt;!-- more --&amp;gt; 2. MVC开发模式 3. EL表达式 4. JSTL标签 5. 三层架构JSP:1. 指令     * 作用：用于配置JSP页面，导入资源文件     * 格式：         &amp;lt;%@ 指令名称 属性名1=属性值1 属性名2=属性值2 ... %&amp;gt;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-13T04:58:32.486Z">
+<meta property="og:updated_time" content="2020-03-31T00:04:36.041Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="miracle_DZL的博客" type="application/atom+xml">
@@ -178,7 +178,7 @@
     1. 指令
     2. 注释
     3. 内置对象
-
+&lt;!-- more --&gt;
 2. MVC开发模式
 3. EL表达式
 4. JSTL标签
@@ -222,7 +222,8 @@
         * page                        Object                        当前页面(Servlet)的对象  this
         * out                        JspWriter                    输出对象，数据输出到页面上
         * config                    ServletConfig                Servlet的配置对象
-        * exception                    Throwable                    异常对象</code></pre><h2 id="MVC：开发模式"><a href="#MVC：开发模式" class="headerlink" title="MVC：开发模式"></a>MVC：开发模式</h2><pre><code>1. jsp演变历史
+        * exception                    Throwable                    异常对象</code></pre><p>​    </p>
+<h2 id="MVC：开发模式"><a href="#MVC：开发模式" class="headerlink" title="MVC：开发模式"></a>MVC：开发模式</h2><pre><code>1. jsp演变历史
     1. 早期只有servlet，只能使用response输出标签数据，非常麻烦
     2. 后来又jsp，简化了Servlet的开发，如果过度使用jsp，在jsp中即写大量的java代码，有写html表，造成难于维护，难于分工协作
     3. 再后来，java的web开发，借鉴mvc开发模式，使得程序的设计更加合理性
@@ -275,26 +276,20 @@
                 * 举例：在request域中存储了name=张三
                 * 获取：${requestScope.name}
 
-            2. ${键名}：表示依次从最小的域中查找是否有该键对应的值，直到找到为止。
+            2. ${键名}：表示依次从最小的域中查找是否有该键对应的值，直到找到为止。</code></pre><p>​<br>​<br>                3. 获取对象、List集合、Map集合的值<br>                    1. 对象：${域名称.键名.属性名}<br>                        * 本质上会去调用对象的getter方法</p>
+<pre><code>            2. List集合：${域名称.键名[索引]}
+
+            3. Map集合：
+                * ${域名称.键名.key名称}
+                * ${域名称.键名[&quot;key名称&quot;]}
 
 
-
-            3. 获取对象、List集合、Map集合的值
-                1. 对象：${域名称.键名.属性名}
-                    * 本质上会去调用对象的getter方法
-
-                2. List集合：${域名称.键名[索引]}
-
-                3. Map集合：
-                    * ${域名称.键名.key名称}
-                    * ${域名称.键名[&quot;key名称&quot;]}
-
-
-    3. 隐式对象：
-        * el表达式中有11个隐式对象
-        * pageContext：
-            * 获取jsp其他八个内置对象
-                * ${pageContext.request.contextPath}：动态获取虚拟目录</code></pre><h2 id="JSTL"><a href="#JSTL" class="headerlink" title="JSTL"></a>JSTL</h2><pre><code>1. 概念：JavaServer Pages Tag Library  JSP标准标签库
+3. 隐式对象：
+    * el表达式中有11个隐式对象
+    * pageContext：
+        * 获取jsp其他八个内置对象
+            * ${pageContext.request.contextPath}：动态获取虚拟目录</code></pre><p>​    </p>
+<h2 id="JSTL"><a href="#JSTL" class="headerlink" title="JSTL"></a>JSTL</h2><pre><code>1. 概念：JavaServer Pages Tag Library  JSP标准标签库
     * 是由Apache组织提供的开源的免费的jsp标签        &lt;标签&gt;
 
 2. 作用：用于简化和替换jsp页面上的java代码        

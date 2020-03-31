@@ -10,15 +10,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JDBC连接池&amp;JDBCTemplate课堂笔记 | miracle_DZL的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今日内容1. 数据库连接池  2. Spring JDBC : JDBC Template数据库连接池1. 概念：其实就是一个容器(集合)，存放数据库连接的容器。         当系统初始化好后，容器被创建，容器中会申请一些连接对象，当用户来访问数据库时，从容器中获取连接对象，用户访问完之后，会将连接对象归还给容器。  2. 好处：     1. 节约资源     2. 用户访问高效  3. 实">
+  <meta name="description" content="今日内容1. 数据库连接池  2. Spring JDBC : JDBC Template">
 <meta name="keywords" content="java web python 考研 算法 数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JDBC连接池&amp;JDBCTemplate课堂笔记">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;31&#x2F;JDBC%E8%BF%9E%E6%8E%A5%E6%B1%A0&amp;JDBCTemplate%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0&#x2F;index.html">
 <meta property="og:site_name" content="miracle_DZL的博客">
-<meta property="og:description" content="今日内容1. 数据库连接池  2. Spring JDBC : JDBC Template数据库连接池1. 概念：其实就是一个容器(集合)，存放数据库连接的容器。         当系统初始化好后，容器被创建，容器中会申请一些连接对象，当用户来访问数据库时，从容器中获取连接对象，用户访问完之后，会将连接对象归还给容器。  2. 好处：     1. 节约资源     2. 用户访问高效  3. 实">
+<meta property="og:description" content="今日内容1. 数据库连接池  2. Spring JDBC : JDBC Template">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-11T07:39:10.546Z">
+<meta property="og:updated_time" content="2020-03-31T00:05:30.800Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="miracle_DZL的博客" type="application/atom+xml">
@@ -176,7 +176,9 @@
       
         <h1 id="今日内容"><a href="#今日内容" class="headerlink" title="今日内容"></a>今日内容</h1><pre><code>1. 数据库连接池
 
-2. Spring JDBC : JDBC Template</code></pre><h2 id="数据库连接池"><a href="#数据库连接池" class="headerlink" title="数据库连接池"></a>数据库连接池</h2><pre><code>1. 概念：其实就是一个容器(集合)，存放数据库连接的容器。
+2. Spring JDBC : JDBC Template</code></pre><a id="more"></a>
+
+<h2 id="数据库连接池"><a href="#数据库连接池" class="headerlink" title="数据库连接池"></a>数据库连接池</h2><pre><code>1. 概念：其实就是一个容器(集合)，存放数据库连接的容器。
         当系统初始化好后，容器被创建，容器中会申请一些连接对象，当用户来访问数据库时，从容器中获取连接对象，用户访问完之后，会将连接对象归还给容器。
 
 2. 好处：
@@ -284,47 +286,27 @@
                 }*/
 
                close(null,stmt,conn);
+            }</code></pre><p>​<br>                public static void close(ResultSet rs , Statement stmt, Connection conn){</p>
+<p>​<br>                    if(rs != null){<br>                        try {<br>                            rs.close();<br>                        } catch (SQLException e) {<br>                            e.printStackTrace();<br>                        }<br>                    }</p>
+<p>​<br>                    if(stmt != null){<br>                        try {<br>                            stmt.close();<br>                        } catch (SQLException e) {<br>                            e.printStackTrace();<br>                        }<br>                    }</p>
+<pre><code>        if(conn != null){
+            try {
+                conn.close();//归还连接
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
+        }
+    }
 
+    /**
+     * 获取连接池方法
+     */
 
-            public static void close(ResultSet rs , Statement stmt, Connection conn){
+    public static DataSource getDataSource(){
+        return  ds;
+    }
 
-
-                if(rs != null){
-                    try {
-                        rs.close();
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    }
-                }
-
-
-                if(stmt != null){
-                    try {
-                        stmt.close();
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    }
-                }
-
-                if(conn != null){
-                    try {
-                        conn.close();//归还连接
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-
-            /**
-             * 获取连接池方法
-             */
-
-            public static DataSource getDataSource(){
-                return  ds;
-            }
-
-        }</code></pre><h2 id="Spring-JDBC"><a href="#Spring-JDBC" class="headerlink" title="Spring JDBC"></a>Spring JDBC</h2><pre><code>* Spring框架对JDBC的简单封装。提供了一个JDBCTemplate对象简化JDBC的开发
+}</code></pre><h2 id="Spring-JDBC"><a href="#Spring-JDBC" class="headerlink" title="Spring JDBC"></a>Spring JDBC</h2><pre><code>* Spring框架对JDBC的简单封装。提供了一个JDBCTemplate对象简化JDBC的开发
 * 步骤：
     1. 导入jar包
     2. 创建JdbcTemplate对象。依赖于数据源DataSource
@@ -370,136 +352,119 @@
 
             public class JdbcTemplateDemo2 {
 
-                //Junit单元测试，可以让方法独立执行
+                //Junit单元测试，可以让方法独立执行</code></pre><p>​<br>                    //1. 获取JDBCTemplate对象<br>                    private JdbcTemplate template = new JdbcTemplate(JDBCUtils.getDataSource());<br>                    /**<br>                     * 1. 修改1号数据的 salary 为 10000<br>                     */<br>                    @Test<br>                    public void test1(){</p>
+<pre><code>    //2. 定义sql
+    String sql = &quot;update emp set salary = 10000 where id = 1001&quot;;
+    //3. 执行sql
+    int count = template.update(sql);
+    System.out.println(count);
+}
 
+/**
+ * 2. 添加一条记录
+ */
+@Test
+public void test2(){
+    String sql = &quot;insert into emp(id,ename,dept_id) values(?,?,?)&quot;;
+    int count = template.update(sql, 1015, &quot;郭靖&quot;, 10);
+    System.out.println(count);
 
-                //1. 获取JDBCTemplate对象
-                private JdbcTemplate template = new JdbcTemplate(JDBCUtils.getDataSource());
-                /**
-                 * 1. 修改1号数据的 salary 为 10000
-                 */
-                @Test
-                public void test1(){
+}
 
-                    //2. 定义sql
-                    String sql = &quot;update emp set salary = 10000 where id = 1001&quot;;
-                    //3. 执行sql
-                    int count = template.update(sql);
-                    System.out.println(count);
-                }
+/**
+ * 3.删除刚才添加的记录
+ */
+@Test
+public void test3(){
+    String sql = &quot;delete from emp where id = ?&quot;;
+    int count = template.update(sql, 1015);
+    System.out.println(count);
+}
 
-                /**
-                 * 2. 添加一条记录
-                 */
-                @Test
-                public void test2(){
-                    String sql = &quot;insert into emp(id,ename,dept_id) values(?,?,?)&quot;;
-                    int count = template.update(sql, 1015, &quot;郭靖&quot;, 10);
-                    System.out.println(count);
+/**
+ * 4.查询id为1001的记录，将其封装为Map集合
+ * 注意：这个方法查询的结果集长度只能是1
+ */
+@Test
+public void test4(){
+    String sql = &quot;select * from emp where id = ? or id = ?&quot;;
+    Map&lt;String, Object&gt; map = template.queryForMap(sql, 1001,1002);
+    System.out.println(map);
+    //{id=1001, ename=孙悟空, job_id=4, mgr=1004, joindate=2000-12-17, salary=10000.00, bonus=null, dept_id=20}
 
-                }
+}
 
-                /**
-                 * 3.删除刚才添加的记录
-                 */
-                @Test
-                public void test3(){
-                    String sql = &quot;delete from emp where id = ?&quot;;
-                    int count = template.update(sql, 1015);
-                    System.out.println(count);
-                }
+/**
+ * 5. 查询所有记录，将其封装为List
+ */
+@Test
+public void test5(){
+    String sql = &quot;select * from emp&quot;;
+    List&lt;Map&lt;String, Object&gt;&gt; list = template.queryForList(sql);
 
-                /**
-                 * 4.查询id为1001的记录，将其封装为Map集合
-                 * 注意：这个方法查询的结果集长度只能是1
-                 */
-                @Test
-                public void test4(){
-                    String sql = &quot;select * from emp where id = ? or id = ?&quot;;
-                    Map&lt;String, Object&gt; map = template.queryForMap(sql, 1001,1002);
-                    System.out.println(map);
-                    //{id=1001, ename=孙悟空, job_id=4, mgr=1004, joindate=2000-12-17, salary=10000.00, bonus=null, dept_id=20}
+    for (Map&lt;String, Object&gt; stringObjectMap : list) {
+        System.out.println(stringObjectMap);
+    }
+}
 
-                }
+/**
+ * 6. 查询所有记录，将其封装为Emp对象的List集合
+ */
 
-                /**
-                 * 5. 查询所有记录，将其封装为List
-                 */
-                @Test
-                public void test5(){
-                    String sql = &quot;select * from emp&quot;;
-                    List&lt;Map&lt;String, Object&gt;&gt; list = template.queryForList(sql);
+@Test
+public void test6(){
+    String sql = &quot;select * from emp&quot;;
+    List&lt;Emp&gt; list = template.query(sql, new RowMapper&lt;Emp&gt;() {
 
-                    for (Map&lt;String, Object&gt; stringObjectMap : list) {
-                        System.out.println(stringObjectMap);
-                    }
-                }
+        @Override
+        public Emp mapRow(ResultSet rs, int i) throws SQLException {
+            Emp emp = new Emp();
+            int id = rs.getInt(&quot;id&quot;);
+            String ename = rs.getString(&quot;ename&quot;);
+            int job_id = rs.getInt(&quot;job_id&quot;);
+            int mgr = rs.getInt(&quot;mgr&quot;);
+            Date joindate = rs.getDate(&quot;joindate&quot;);
+            double salary = rs.getDouble(&quot;salary&quot;);
+            double bonus = rs.getDouble(&quot;bonus&quot;);
+            int dept_id = rs.getInt(&quot;dept_id&quot;);
 
-                /**
-                 * 6. 查询所有记录，将其封装为Emp对象的List集合
-                 */
+            emp.setId(id);
+            emp.setEname(ename);
+            emp.setJob_id(job_id);
+            emp.setMgr(mgr);
+            emp.setJoindate(joindate);
+            emp.setSalary(salary);
+            emp.setBonus(bonus);
+            emp.setDept_id(dept_id);
 
-                @Test
-                public void test6(){
-                    String sql = &quot;select * from emp&quot;;
-                    List&lt;Emp&gt; list = template.query(sql, new RowMapper&lt;Emp&gt;() {
+            return emp;
+        }
+    });</code></pre><p>​<br>                        for (Emp emp : list) {<br>                            System.out.println(emp);<br>                        }<br>                    }</p>
+<pre><code>    /**
+     * 6. 查询所有记录，将其封装为Emp对象的List集合
+     */
 
-                        @Override
-                        public Emp mapRow(ResultSet rs, int i) throws SQLException {
-                            Emp emp = new Emp();
-                            int id = rs.getInt(&quot;id&quot;);
-                            String ename = rs.getString(&quot;ename&quot;);
-                            int job_id = rs.getInt(&quot;job_id&quot;);
-                            int mgr = rs.getInt(&quot;mgr&quot;);
-                            Date joindate = rs.getDate(&quot;joindate&quot;);
-                            double salary = rs.getDouble(&quot;salary&quot;);
-                            double bonus = rs.getDouble(&quot;bonus&quot;);
-                            int dept_id = rs.getInt(&quot;dept_id&quot;);
+    @Test
+    public void test6_2(){
+        String sql = &quot;select * from emp&quot;;
+        List&lt;Emp&gt; list = template.query(sql, new BeanPropertyRowMapper&lt;Emp&gt;(Emp.class));
+        for (Emp emp : list) {
+            System.out.println(emp);
+        }
+    }
 
-                            emp.setId(id);
-                            emp.setEname(ename);
-                            emp.setJob_id(job_id);
-                            emp.setMgr(mgr);
-                            emp.setJoindate(joindate);
-                            emp.setSalary(salary);
-                            emp.setBonus(bonus);
-                            emp.setDept_id(dept_id);
+    /**
+     * 7. 查询总记录数
+     */
 
-                            return emp;
-                        }
-                    });
+    @Test
+    public void test7(){
+        String sql = &quot;select count(id) from emp&quot;;
+        Long total = template.queryForObject(sql, Long.class);
+        System.out.println(total);
+    }
 
-
-                    for (Emp emp : list) {
-                        System.out.println(emp);
-                    }
-                }
-
-                /**
-                 * 6. 查询所有记录，将其封装为Emp对象的List集合
-                 */
-
-                @Test
-                public void test6_2(){
-                    String sql = &quot;select * from emp&quot;;
-                    List&lt;Emp&gt; list = template.query(sql, new BeanPropertyRowMapper&lt;Emp&gt;(Emp.class));
-                    for (Emp emp : list) {
-                        System.out.println(emp);
-                    }
-                }
-
-                /**
-                 * 7. 查询总记录数
-                 */
-
-                @Test
-                public void test7(){
-                    String sql = &quot;select count(id) from emp&quot;;
-                    Long total = template.queryForObject(sql, Long.class);
-                    System.out.println(total);
-                }
-
-            }</code></pre>
+}</code></pre>
       
 
       
