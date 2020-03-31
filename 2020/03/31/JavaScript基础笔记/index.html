@@ -10,15 +10,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JavaScript基础笔记 | miracle_DZL的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今日内容1. JavaScript基础JavaScript：* 概念：    一门客户端脚本语言     * 运行在客户端浏览器中的。每一个浏览器都有JavaScript的解析引擎&amp;lt;!-- more --&amp;gt;     * 脚本语言：不需要编译，直接就可以被浏览器解析执行了  * 功能：     * 可以来增强用户和html页面的交互过程，可以来控制html元素，让页面有一些动态的效果，增">
+  <meta name="description" content="今日内容1. JavaScript基础">
 <meta name="keywords" content="java web python 考研 算法 数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript基础笔记">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;31&#x2F;JavaScript%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0&#x2F;index.html">
 <meta property="og:site_name" content="miracle_DZL的博客">
-<meta property="og:description" content="今日内容1. JavaScript基础JavaScript：* 概念：    一门客户端脚本语言     * 运行在客户端浏览器中的。每一个浏览器都有JavaScript的解析引擎&amp;lt;!-- more --&amp;gt;     * 脚本语言：不需要编译，直接就可以被浏览器解析执行了  * 功能：     * 可以来增强用户和html页面的交互过程，可以来控制html元素，让页面有一些动态的效果，增">
+<meta property="og:description" content="今日内容1. JavaScript基础">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-31T00:05:12.729Z">
+<meta property="og:updated_time" content="2020-03-31T02:29:35.668Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="miracle_DZL的博客" type="application/atom+xml">
@@ -174,8 +174,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="今日内容"><a href="#今日内容" class="headerlink" title="今日内容"></a>今日内容</h1><pre><code>1. JavaScript基础</code></pre><h2 id="JavaScript："><a href="#JavaScript：" class="headerlink" title="JavaScript："></a>JavaScript：</h2><pre><code>* 概念：    一门客户端脚本语言
-    * 运行在客户端浏览器中的。每一个浏览器都有JavaScript的解析引擎&lt;!-- more --&gt;
+        <h1 id="今日内容"><a href="#今日内容" class="headerlink" title="今日内容"></a>今日内容</h1><pre><code>1. JavaScript基础</code></pre><a id="more"></a>
+
+<h2 id="JavaScript："><a href="#JavaScript：" class="headerlink" title="JavaScript："></a>JavaScript：</h2><pre><code>* 概念：    一门客户端脚本语言
+    * 运行在客户端浏览器中的。每一个浏览器都有JavaScript的解析引擎
     * 脚本语言：不需要编译，直接就可以被浏览器解析执行了
 
 * 功能：
@@ -298,11 +300,8 @@
 
             &lt;script&gt;
 
-                document.write(&quot;&lt;table  align=&apos;center&apos;&gt;&quot;);</code></pre><p>​<br>                    //1.完成基本的for循环嵌套，展示乘法表<br>                    for (var i = 1; i &lt;= 9 ; i++) {<br>                        document.write(“<tr>“);<br>                        for (var j = 1; j &lt;=i ; j++) {<br>                            document.write(“<td>“);</p>
-<pre><code>                        //输出  1 * 1 = 1
-                        document.write(i + &quot; * &quot; + j + &quot; = &quot; + ( i*j) +&quot;&amp;nbsp;&amp;nbsp;&amp;nbsp;&quot;);
-
-                        document.write(&quot;&lt;/td&gt;&quot;);
+                document.write(&quot;&lt;table  align=&apos;center&apos;&gt;&quot;);</code></pre><p>​<br>​                    //1.完成基本的for循环嵌套，展示乘法表<br>​                    for (var i = 1; i &lt;= 9 ; i++) {<br>​                        document.write(“<tr>“);<br>​                        for (var j = 1; j &lt;=i ; j++) {<br>​                            document.write(“<td>“);<br>​<br>                            //输出  1 * 1 = 1<br>                            document.write(i + “ * “ + j + “ = “ + ( i*j) +”&nbsp;&nbsp;&nbsp;”);</p>
+<pre><code>                        document.write(&quot;&lt;/td&gt;&quot;);
                     }
                     /*//输出换行
                     document.write(&quot;&lt;br&gt;&quot;);*/

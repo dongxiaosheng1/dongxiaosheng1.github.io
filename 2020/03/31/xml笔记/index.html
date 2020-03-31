@@ -10,15 +10,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>xml笔记 | miracle_DZL的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今日内容1. XML     1. 概念     2. 语法     3. 解析&amp;lt;!-- more --&amp;gt;XML：1. 概念：Extensible Markup Language 可扩展标记语言     * 可扩展：标签都是自定义的。 &amp;lt;user&amp;gt;  &amp;lt;student&amp;gt;      * 功能         * 存储数据             1. 配置文件">
+  <meta name="description" content="今日内容1. XML     1. 概念     2. 语法     3. 解析">
 <meta name="keywords" content="java web python 考研 算法 数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="xml笔记">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;31&#x2F;xml%E7%AC%94%E8%AE%B0&#x2F;index.html">
 <meta property="og:site_name" content="miracle_DZL的博客">
-<meta property="og:description" content="今日内容1. XML     1. 概念     2. 语法     3. 解析&amp;lt;!-- more --&amp;gt;XML：1. 概念：Extensible Markup Language 可扩展标记语言     * 可扩展：标签都是自定义的。 &amp;lt;user&amp;gt;  &amp;lt;student&amp;gt;      * 功能         * 存储数据             1. 配置文件">
+<meta property="og:description" content="今日内容1. XML     1. 概念     2. 语法     3. 解析">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-31T00:06:30.192Z">
+<meta property="og:updated_time" content="2020-03-31T02:29:16.842Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="miracle_DZL的博客" type="application/atom+xml">
@@ -177,7 +177,9 @@
         <h1 id="今日内容"><a href="#今日内容" class="headerlink" title="今日内容"></a>今日内容</h1><pre><code>1. XML
     1. 概念
     2. 语法
-    3. 解析&lt;!-- more --&gt;</code></pre><h2 id="XML："><a href="#XML：" class="headerlink" title="XML："></a>XML：</h2><pre><code>1. 概念：Extensible Markup Language 可扩展标记语言
+    3. 解析</code></pre><a id="more"></a>
+
+<h2 id="XML："><a href="#XML：" class="headerlink" title="XML："></a>XML：</h2><pre><code>1. 概念：Extensible Markup Language 可扩展标记语言
     * 可扩展：标签都是自定义的。 &lt;user&gt;  &lt;student&gt;
 
     * 功能
@@ -239,13 +241,8 @@
             id属性值唯一
         5. 文本：
             * CDATA区：在该区域中的数据会被原样展示
-                * 格式：  &lt;![CDATA[ 数据 ]]&gt;</code></pre><p>​<br>        * 约束：规定xml文档的书写规则<br>            * 作为框架的使用者(程序员)：<br>                1. 能够在xml中引入约束文档<br>                2. 能够简单的读懂约束文档</p>
-<pre><code>* 分类：
-    1. DTD:一种简单的约束技术
-    2. Schema:一种复杂的约束技术
-
-
-* DTD：
+                * 格式：  &lt;![CDATA[ 数据 ]]&gt;</code></pre><p>​<br>​        * 约束：规定xml文档的书写规则<br>​            * 作为框架的使用者(程序员)：<br>​                1. 能够在xml中引入约束文档<br>​                2. 能够简单的读懂约束文档<br>​<br>            * 分类：<br>                1. DTD:一种简单的约束技术<br>                2. Schema:一种复杂的约束技术</p>
+<pre><code>* DTD：
     * 引入dtd文档到xml文档中
         * 内部dtd：将约束规则定义在xml文档中
         * 外部dtd：将约束的规则定义在外部的dtd文件中
@@ -274,7 +271,7 @@
             * 缺点：占内存
         2. SAX：逐行读取，基于事件驱动的。
             * 优点：不占内存。
-            * 缺点：只能读取，不能增删改</code></pre><p>​<br>        * xml常见的解析器：<br>            1. JAXP：sun公司提供的解析器，支持dom和sax两种思想<br>            2. DOM4J：一款非常优秀的解析器<br>            3. Jsoup：jsoup 是一款Java 的HTML解析器，可直接解析某个URL地址、HTML文本内容。它提供了一套非常省力的API，可通过DOM，CSS以及类似于jQuery的操作方法来取出和操作数据。<br>            4. PULL：Android操作系统内置的解析器，sax方式的。</p>
+            * 缺点：只能读取，不能增删改</code></pre><p>​<br>​        * xml常见的解析器：<br>​            1. JAXP：sun公司提供的解析器，支持dom和sax两种思想<br>​            2. DOM4J：一款非常优秀的解析器<br>​            3. Jsoup：jsoup 是一款Java 的HTML解析器，可直接解析某个URL地址、HTML文本内容。它提供了一套非常省力的API，可通过DOM，CSS以及类似于jQuery的操作方法来取出和操作数据。<br>​            4. PULL：Android操作系统内置的解析器，sax方式的。</p>
 <pre><code>* Jsoup：jsoup 是一款Java 的HTML解析器，可直接解析某个URL地址、HTML文本内容。它提供了一套非常省力的API，可通过DOM，CSS以及类似于jQuery的操作方法来取出和操作数据。
     * 快速入门：
         * 步骤：
@@ -324,11 +321,8 @@
             * String text():获取文本内容
             * String html():获取标签体的所有内容(包括字标签的字符串内容)
     5. Node：节点对象
-        * 是Document和Element的父类</code></pre><p>​<br>        * 快捷查询方式：<br>            1. selector:选择器<br>                * 使用的方法：Elements    select​(String cssQuery)<br>                    * 语法：参考Selector类中定义的语法<br>            2. XPath：XPath即为XML路径语言，它是一种用来确定XML（标准通用标记语言的子集）文档中某部分位置的语言<br>                * 使用Jsoup的Xpath需要额外导入jar包。<br>                * 查询w3cshool参考手册，使用xpath的语法完成查询<br>                * 代码：<br>                    //1.获取student.xml的path<br>                    String path = JsoupDemo6.class.getClassLoader().getResource(“student.xml”).getPath();<br>                    //2.获取Document对象<br>                    Document document = Jsoup.parse(new File(path), “utf-8”);</p>
-<pre><code>//3.根据document对象，创建JXDocument对象
-JXDocument jxDocument = new JXDocument(document);
-
-//4.结合xpath语法查询
+        * 是Document和Element的父类</code></pre><p>​<br>​        * 快捷查询方式：<br>​            1. selector:选择器<br>​                * 使用的方法：Elements    select​(String cssQuery)<br>​                    * 语法：参考Selector类中定义的语法<br>​            2. XPath：XPath即为XML路径语言，它是一种用来确定XML（标准通用标记语言的子集）文档中某部分位置的语言<br>​                * 使用Jsoup的Xpath需要额外导入jar包。<br>​                * 查询w3cshool参考手册，使用xpath的语法完成查询<br>​                * 代码：<br>​                    //1.获取student.xml的path<br>​                    String path = JsoupDemo6.class.getClassLoader().getResource(“student.xml”).getPath();<br>​                    //2.获取Document对象<br>​                    Document document = Jsoup.parse(new File(path), “utf-8”);<br>​<br>                    //3.根据document对象，创建JXDocument对象<br>                    JXDocument jxDocument = new JXDocument(document);</p>
+<pre><code>//4.结合xpath语法查询
 //4.1查询所有student标签
 List&lt;JXNode&gt; jxNodes = jxDocument.selN(&quot;//student&quot;);
 for (JXNode jxNode : jxNodes) {

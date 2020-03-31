@@ -10,15 +10,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Response笔记 | miracle_DZL的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今日内容1. HTTP协议：响应消息 2. Response对象 3. ServletContext对象&amp;lt;!-- more --&amp;gt;HTTP协议：1. 请求消息：客户端发送给服务器端的数据     * 数据格式：         1. 请求行         2. 请求头         3. 请求空行         4. 请求体 2. 响应消息：服务器端发送给客户端的数据     *">
+  <meta name="description" content="今日内容1. HTTP协议：响应消息 2. Response对象 3. ServletContext对象">
 <meta name="keywords" content="java web python 考研 算法 数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Response笔记">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;31&#x2F;Response%E7%AC%94%E8%AE%B0&#x2F;index.html">
 <meta property="og:site_name" content="miracle_DZL的博客">
-<meta property="og:description" content="今日内容1. HTTP协议：响应消息 2. Response对象 3. ServletContext对象&amp;lt;!-- more --&amp;gt;HTTP协议：1. 请求消息：客户端发送给服务器端的数据     * 数据格式：         1. 请求行         2. 请求头         3. 请求空行         4. 请求体 2. 响应消息：服务器端发送给客户端的数据     *">
+<meta property="og:description" content="今日内容1. HTTP协议：响应消息 2. Response对象 3. ServletContext对象">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-31T00:05:46.754Z">
+<meta property="og:updated_time" content="2020-03-31T02:28:38.024Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="miracle_DZL的博客" type="application/atom+xml">
@@ -176,7 +176,9 @@
       
         <h1 id="今日内容"><a href="#今日内容" class="headerlink" title="今日内容"></a>今日内容</h1><pre><code>1. HTTP协议：响应消息
 2. Response对象
-3. ServletContext对象&lt;!-- more --&gt;</code></pre><h2 id="HTTP协议："><a href="#HTTP协议：" class="headerlink" title="HTTP协议："></a>HTTP协议：</h2><pre><code>1. 请求消息：客户端发送给服务器端的数据
+3. ServletContext对象</code></pre><a id="more"></a>
+
+<h2 id="HTTP协议："><a href="#HTTP协议：" class="headerlink" title="HTTP协议："></a>HTTP协议：</h2><pre><code>1. 请求消息：客户端发送给服务器端的数据
     * 数据格式：
         1. 请求行
         2. 请求头
@@ -196,7 +198,7 @@
                         * 代表：
                             * 404（请求路径没有对应的资源） 
                             * 405：请求方式没有对应的doXxx方法
-                    5. 5xx：服务器端错误。代表：500(服务器内部出现异常)</code></pre><p>​<br>            2. 响应头：<br>                1. 格式：头名称： 值<br>                2. 常见的响应头：<br>                    1. Content-Type：服务器告诉客户端本次响应体数据格式以及编码格式<br>                    2. Content-disposition：服务器告诉客户端以什么格式打开响应体数据<br>                        * 值：<br>                            * in-line:默认值,在当前页面内打开<br>                            * attachment;filename=xxx：以附件形式打开响应体。文件下载<br>            3. 响应空行<br>            4. 响应体:传输的数据</p>
+                    5. 5xx：服务器端错误。代表：500(服务器内部出现异常)</code></pre><p>​<br>​            2. 响应头：<br>​                1. 格式：头名称： 值<br>​                2. 常见的响应头：<br>​                    1. Content-Type：服务器告诉客户端本次响应体数据格式以及编码格式<br>​                    2. Content-disposition：服务器告诉客户端以什么格式打开响应体数据<br>​                        * 值：<br>​                            * in-line:默认值,在当前页面内打开<br>​                            * attachment;filename=xxx：以附件形式打开响应体。文件下载<br>​            3. 响应空行<br>​            4. 响应体:传输的数据</p>
 <pre><code>* 响应字符串格式
     HTTP/1.1 200 OK
     Content-Type: text/html;charset=UTF-8
