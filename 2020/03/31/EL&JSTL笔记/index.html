@@ -10,15 +10,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>EL&amp;JSTL笔记 | miracle_DZL的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今日内容">
+  <meta name="description" content="今日内容1. JSP:     1. 指令     2. 注释     3. 内置对象 2. MVC开发模式 3. EL表达式 4. JSTL标签 5. 三层架构">
 <meta name="keywords" content="java web python 考研 算法 数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="EL&amp;JSTL笔记">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;31&#x2F;EL&amp;JSTL%E7%AC%94%E8%AE%B0&#x2F;index.html">
 <meta property="og:site_name" content="miracle_DZL的博客">
-<meta property="og:description" content="今日内容">
+<meta property="og:description" content="今日内容1. JSP:     1. 指令     2. 注释     3. 内置对象 2. MVC开发模式 3. EL表达式 4. JSTL标签 5. 三层架构">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-31T00:13:48.946Z">
+<meta property="og:updated_time" content="2020-03-31T02:37:45.684Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="miracle_DZL的博客" type="application/atom+xml">
@@ -174,14 +174,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="今日内容"><a href="#今日内容" class="headerlink" title="今日内容"></a>今日内容<a id="more"></a></h1><pre><code>1. JSP:
+        <h1 id="今日内容"><a href="#今日内容" class="headerlink" title="今日内容"></a>今日内容</h1><pre><code>1. JSP:
     1. 指令
     2. 注释
     3. 内置对象
 2. MVC开发模式
 3. EL表达式
 4. JSTL标签
-5. 三层架构</code></pre><h2 id="JSP"><a href="#JSP" class="headerlink" title="JSP:"></a>JSP:</h2><pre><code>1. 指令
+5. 三层架构</code></pre><a id="more"></a>
+
+<h2 id="JSP"><a href="#JSP" class="headerlink" title="JSP:"></a>JSP:</h2><pre><code>1. 指令
     * 作用：用于配置JSP页面，导入资源文件
     * 格式：
         &lt;%@ 指令名称 属性名1=属性值1 属性名2=属性值2 ... %&gt;
@@ -275,13 +277,8 @@
                 * 举例：在request域中存储了name=张三
                 * 获取：${requestScope.name}
 
-            2. ${键名}：表示依次从最小的域中查找是否有该键对应的值，直到找到为止。</code></pre><p>​<br>​<br>​                3. 获取对象、List集合、Map集合的值<br>​                    1. 对象：${域名称.键名.属性名}<br>​                        * 本质上会去调用对象的getter方法<br>​<br>                    2. List集合：${域名称.键名[索引]}</p>
-<pre><code>            3. Map集合：
-                * ${域名称.键名.key名称}
-                * ${域名称.键名[&quot;key名称&quot;]}
-
-
-3. 隐式对象：
+            2. ${键名}：表示依次从最小的域中查找是否有该键对应的值，直到找到为止。</code></pre><p>​<br>​<br>​                3. 获取对象、List集合、Map集合的值<br>​                    1. 对象：${域名称.键名.属性名}<br>​                        * 本质上会去调用对象的getter方法<br>​<br>​                    2. List集合：${域名称.键名[索引]}<br>​<br>                    3. Map集合：<br>                        * ${域名称.键名.key名称}<br>                        * ${域名称.键名[“key名称”]}</p>
+<pre><code>3. 隐式对象：
     * el表达式中有11个隐式对象
     * pageContext：
         * 获取jsp其他八个内置对象

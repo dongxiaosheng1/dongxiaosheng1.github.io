@@ -10,15 +10,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JavaScript高级笔记 | miracle_DZL的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今日内容：1. JavaScript：     1. ECMAScript：     2. BOM：     3. DOM：         1. 事件&amp;lt;!-- more --&amp;gt;DOM简单学习：为了满足案例要求* 功能：控制html文档的内容 * 获取页面标签(元素)对象：Element     * document.getElementById(&amp;quot;id值&amp;quot;):通过">
+  <meta name="description" content="今日内容：1. JavaScript：     1. ECMAScript：     2. BOM：     3. DOM：         1. 事件">
 <meta name="keywords" content="java web python 考研 算法 数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript高级笔记">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;31&#x2F;JavaScript%E9%AB%98%E7%BA%A7%E7%AC%94%E8%AE%B0&#x2F;index.html">
 <meta property="og:site_name" content="miracle_DZL的博客">
-<meta property="og:description" content="今日内容：1. JavaScript：     1. ECMAScript：     2. BOM：     3. DOM：         1. 事件&amp;lt;!-- more --&amp;gt;DOM简单学习：为了满足案例要求* 功能：控制html文档的内容 * 获取页面标签(元素)对象：Element     * document.getElementById(&amp;quot;id值&amp;quot;):通过">
+<meta property="og:description" content="今日内容：1. JavaScript：     1. ECMAScript：     2. BOM：     3. DOM：         1. 事件">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-31T00:04:57.341Z">
+<meta property="og:updated_time" content="2020-03-31T02:37:08.100Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="miracle_DZL的博客" type="application/atom+xml">
@@ -178,7 +178,9 @@
     1. ECMAScript：
     2. BOM：
     3. DOM：
-        1. 事件&lt;!-- more --&gt;</code></pre><h2 id="DOM简单学习：为了满足案例要求"><a href="#DOM简单学习：为了满足案例要求" class="headerlink" title="DOM简单学习：为了满足案例要求"></a>DOM简单学习：为了满足案例要求</h2><pre><code>* 功能：控制html文档的内容
+        1. 事件</code></pre><a id="more"></a>
+
+<h2 id="DOM简单学习：为了满足案例要求"><a href="#DOM简单学习：为了满足案例要求" class="headerlink" title="DOM简单学习：为了满足案例要求"></a>DOM简单学习：为了满足案例要求</h2><pre><code>* 功能：控制html文档的内容
 * 获取页面标签(元素)对象：Element
     * document.getElementById(&quot;id值&quot;):通过元素的id获取元素对象
 
@@ -218,52 +220,43 @@
                 //1.获取light2对象
                 var light2 = document.getElementById(&quot;light2&quot;);
                 //2.绑定事件
-                light2.onclick = fun2;</code></pre><p>​<br>                </script><br>            </body></p>
-<pre><code>* 案例1：电灯开关
-    &lt;!DOCTYPE html&gt;
-    &lt;html lang=&quot;en&quot;&gt;
-    &lt;head&gt;
-        &lt;meta charset=&quot;UTF-8&quot;&gt;
-        &lt;title&gt;电灯开关&lt;/title&gt;
+                light2.onclick = fun2;</code></pre><p>​<br>​                </script><br>​            </body><br>​<br>    * 案例1：电灯开关<br>        <!DOCTYPE html><br>        <html lang="en"><br>        <head><br>            <meta charset="UTF-8"><br>            <title>电灯开关</title></p>
+<pre><code>&lt;/head&gt;
+&lt;body&gt;
 
-    &lt;/head&gt;
-    &lt;body&gt;
+&lt;img id=&quot;light&quot; src=&quot;img/off.gif&quot;&gt;
 
-    &lt;img id=&quot;light&quot; src=&quot;img/off.gif&quot;&gt;
+&lt;script&gt;
+    /*
+        分析：
+            1.获取图片对象
+            2.绑定单击事件
+            3.每次点击切换图片
+                * 规则：
+                    * 如果灯是开的 on,切换图片为 off
+                    * 如果灯是关的 off,切换图片为 on
+                * 使用标记flag来完成
 
-    &lt;script&gt;
-        /*
-            分析：
-                1.获取图片对象
-                2.绑定单击事件
-                3.每次点击切换图片
-                    * 规则：
-                        * 如果灯是开的 on,切换图片为 off
-                        * 如果灯是关的 off,切换图片为 on
-                    * 使用标记flag来完成
+     */
 
-         */
+    //1.获取图片对象
+    var light = document.getElementById(&quot;light&quot;);
 
-        //1.获取图片对象
-        var light = document.getElementById(&quot;light&quot;);
+    var flag = false;//代表灯是灭的。 off图片
 
-        var flag = false;//代表灯是灭的。 off图片
+    //2.绑定单击事件
+    light.onclick = function(){
+        if(flag){//判断如果灯是开的，则灭掉
+            light.src = &quot;img/off.gif&quot;;
+            flag = false;
 
-        //2.绑定单击事件
-        light.onclick = function(){
-            if(flag){//判断如果灯是开的，则灭掉
-                light.src = &quot;img/off.gif&quot;;
-                flag = false;
+        }else{
+            //如果灯是灭的，则打开
 
-            }else{
-                //如果灯是灭的，则打开
-
-                light.src = &quot;img/on.gif&quot;;
-                flag = true;
-            }</code></pre><p>​<br>            }</p>
-<pre><code>&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre><h1 id="BOM"><a href="#BOM" class="headerlink" title="BOM:"></a>BOM:</h1><pre><code>1. 概念：Browser Object Model 浏览器对象模型
+            light.src = &quot;img/on.gif&quot;;
+            flag = true;
+        }</code></pre><p>​<br>​            }<br>​<br>        </script><br>        </body><br>        </html></p>
+<h1 id="BOM"><a href="#BOM" class="headerlink" title="BOM:"></a>BOM:</h1><pre><code>1. 概念：Browser Object Model 浏览器对象模型
     * 将浏览器的各个组成部分封装成对象。
 
 2. 组成：
@@ -423,12 +416,8 @@
         2. onmouseup    鼠标按键被松开。
         3. onmousemove    鼠标被移动。
         4. onmouseover    鼠标移到某元素之上。
-        5. onmouseout    鼠标从某元素移开。</code></pre><p>​<br>        5. 键盘事件：<br>            1. onkeydown    某个键盘按键被按下。<br>            2. onkeyup        某个键盘按键被松开。<br>            3. onkeypress    某个键盘按键被按下并松开。</p>
-<pre><code>6. 选择和改变
-    1. onchange    域的内容被改变。
-    2. onselect    文本被选中。
-
-7. 表单事件：
+        5. onmouseout    鼠标从某元素移开。</code></pre><p>​<br>​        5. 键盘事件：<br>​            1. onkeydown    某个键盘按键被按下。<br>​            2. onkeyup        某个键盘按键被松开。<br>​            3. onkeypress    某个键盘按键被按下并松开。<br>​<br>        6. 选择和改变<br>            1. onchange    域的内容被改变。<br>            2. onselect    文本被选中。</p>
+<pre><code>7. 表单事件：
     1. onsubmit    确认按钮被点击。
     2. onreset    重置按钮被点击。</code></pre>
       
