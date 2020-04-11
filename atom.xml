@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-03T01:26:59.532Z</updated>
+  <updated>2020-04-11T03:03:23.934Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,13 +21,14 @@
     <link href="http://yoursite.com/2020/04/03/tomcat%E6%8A%A5%E9%94%99%20java.lang.AbstractMethodError/"/>
     <id>http://yoursite.com/2020/04/03/tomcat报错 java.lang.AbstractMethodError/</id>
     <published>2020-04-03T01:14:49.190Z</published>
-    <updated>2020-04-03T01:26:59.532Z</updated>
+    <updated>2020-04-11T03:03:23.934Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="java-lang-AbstractMethodError-javax-servlet-jsp-JspFactory-getJspApplicationContext-Ljavax-servlet"><a href="#java-lang-AbstractMethodError-javax-servlet-jsp-JspFactory-getJspApplicationContext-Ljavax-servlet" class="headerlink" title="java.lang.AbstractMethodError: javax.servlet.jsp.JspFactory.getJspApplicationContext(Ljavax/servlet/"></a>java.lang.AbstractMethodError: javax.servlet.jsp.JspFactory.getJspApplicationContext(Ljavax/servlet/<a id="more"></a></h2><h2 id=""><a href="#" class="headerlink" title=""></a><img src="http://q7e5szr7k.bkt.clouddn.com/blog/20200403/N8gKuiG0xIgo.png?imageslim" alt="mark"></h2><p>当遇到这个错误时，我仔细思考并查找发现是项目的lib包下，jasper-compiler.jar &amp; jasper-runtime.jar &amp;  servlet-api.jar删除就行，其实是我前一天导入部署了老师给的一个web项目,其中项目webinf下的lib目录中上边的jar包与tomcat的jar包重复冲突。</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://images.unsplash.com/photo-1555911599-e70784b1e21d?ixlib=rb-1.2.1&q=99&fm=jpg&crop=entropy&cs=tinysrgb&w=2048&fit=max&ixid=eyJhcHBfaWQiOjcwOTV9" alt="mark"></p><h2 id="java-lang-AbstractMethodError-javax-servlet-jsp-JspFactory-getJspApplicationContext-Ljavax-servlet"><a href="#java-lang-AbstractMethodError-javax-servlet-jsp-JspFactory-getJspApplicationContext-Ljavax-servlet" class="headerlink" title="java.lang.AbstractMethodError: javax.servlet.jsp.JspFactory.getJspApplicationContext(Ljavax/servlet/"></a>java.lang.AbstractMethodError: javax.servlet.jsp.JspFactory.getJspApplicationContext(Ljavax/servlet/<a id="more"></a></h2><h2 id=""><a href="#" class="headerlink" title=""></a><img src="http://q7e5szr7k.bkt.clouddn.com/blog/20200403/N8gKuiG0xIgo.png?imageslim" alt="mark"></h2><p>当遇到这个错误时，我仔细思考并查找发现是项目的lib包下，jasper-compiler.jar &amp; jasper-runtime.jar &amp;  servlet-api.jar删除就行，其实是我前一天导入部署了老师给的一个web项目,其中项目webinf下的lib目录中上边的jar包与tomcat的jar包重复冲突。</p>]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;java-lang-AbstractMethodError-javax-servlet-jsp-JspFactory-getJspApplicationContext-Ljavax-servlet&quot;&gt;&lt;a href=&quot;#java-lang-AbstractMethodError-javax-servlet-jsp-JspFactory-getJspApplicationContext-Ljavax-servlet&quot; class=&quot;headerlink&quot; title=&quot;java.lang.AbstractMethodError: javax.servlet.jsp.JspFactory.getJspApplicationContext(Ljavax/servlet/&quot;&gt;&lt;/a&gt;java.lang.AbstractMethodError: javax.servlet.jsp.JspFactory.getJspApplicationContext(Ljavax/servlet/
+      &lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1555911599-e70784b1e21d?ixlib=rb-1.2.1&amp;q=99&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=2048&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjcwOTV9&quot; alt=&quot;mark&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;java-lang-AbstractMethodError-javax-servlet-jsp-JspFactory-getJspApplicationContext-Ljavax-servlet&quot;&gt;&lt;a href=&quot;#java-lang-AbstractMethodError-javax-servlet-jsp-JspFactory-getJspApplicationContext-Ljavax-servlet&quot; class=&quot;headerlink&quot; title=&quot;java.lang.AbstractMethodError: javax.servlet.jsp.JspFactory.getJspApplicationContext(Ljavax/servlet/&quot;&gt;&lt;/a&gt;java.lang.AbstractMethodError: javax.servlet.jsp.JspFactory.getJspApplicationContext(Ljavax/servlet/
     
     </summary>
     
