@@ -18,11 +18,10 @@
 <meta property="og:site_name" content="miracle_DZL的博客">
 <meta property="og:description" content="java.lang.AbstractMethodError: javax.servlet.jsp.JspFactory.getJspApplicationContext(Ljavax&#x2F;servlet&#x2F;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https:&#x2F;&#x2F;images.unsplash.com&#x2F;photo-1555911599-e70784b1e21d?ixlib=rb-1.2.1&amp;q=99&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=2048&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjcwOTV9">
-<meta property="og:image" content="http:&#x2F;&#x2F;q7e5szr7k.bkt.clouddn.com&#x2F;blog&#x2F;20200403&#x2F;N8gKuiG0xIgo.png?imageslim">
-<meta property="og:updated_time" content="2020-04-11T03:03:23.934Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;pic.chenlun1314.top&#x2F;blog&#x2F;20200403&#x2F;N8gKuiG0xIgo.png?imageslim">
+<meta property="og:updated_time" content="2020-04-22T03:23:55.701Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;images.unsplash.com&#x2F;photo-1555911599-e70784b1e21d?ixlib=rb-1.2.1&amp;q=99&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=2048&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjcwOTV9">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;pic.chenlun1314.top&#x2F;blog&#x2F;20200403&#x2F;N8gKuiG0xIgo.png?imageslim">
   
     <link rel="alternative" href="/atom.xml" title="miracle_DZL的博客" type="application/atom+xml">
   
@@ -177,8 +176,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://images.unsplash.com/photo-1555911599-e70784b1e21d?ixlib=rb-1.2.1&q=99&fm=jpg&crop=entropy&cs=tinysrgb&w=2048&fit=max&ixid=eyJhcHBfaWQiOjcwOTV9" alt="mark"></p>
-<h2 id="java-lang-AbstractMethodError-javax-servlet-jsp-JspFactory-getJspApplicationContext-Ljavax-servlet"><a href="#java-lang-AbstractMethodError-javax-servlet-jsp-JspFactory-getJspApplicationContext-Ljavax-servlet" class="headerlink" title="java.lang.AbstractMethodError: javax.servlet.jsp.JspFactory.getJspApplicationContext(Ljavax/servlet/"></a>java.lang.AbstractMethodError: javax.servlet.jsp.JspFactory.getJspApplicationContext(Ljavax/servlet/<a id="more"></a></h2><h2 id=""><a href="#" class="headerlink" title=""></a><img src="http://q7e5szr7k.bkt.clouddn.com/blog/20200403/N8gKuiG0xIgo.png?imageslim" alt="mark"></h2><p>当遇到这个错误时，我仔细思考并查找发现是项目的lib包下，jasper-compiler.jar &amp; jasper-runtime.jar &amp;  servlet-api.jar删除就行，其实是我前一天导入部署了老师给的一个web项目,其中项目webinf下的lib目录中上边的jar包与tomcat的jar包重复冲突。</p>
+        <h2 id="java-lang-AbstractMethodError-javax-servlet-jsp-JspFactory-getJspApplicationContext-Ljavax-servlet"><a href="#java-lang-AbstractMethodError-javax-servlet-jsp-JspFactory-getJspApplicationContext-Ljavax-servlet" class="headerlink" title="java.lang.AbstractMethodError: javax.servlet.jsp.JspFactory.getJspApplicationContext(Ljavax/servlet/"></a>java.lang.AbstractMethodError: javax.servlet.jsp.JspFactory.getJspApplicationContext(Ljavax/servlet/<a id="more"></a></h2><h2 id=""><a href="#" class="headerlink" title=""></a><img src="http://pic.chenlun1314.top/blog/20200403/N8gKuiG0xIgo.png?imageslim" alt="mark"></h2><p>当遇到这个错误时，我仔细思考并查找发现是项目的lib包下，jasper-compiler.jar &amp; jasper-runtime.jar &amp;  servlet-api.jar删除就行，其实是我前一天导入部署了老师给的一个web项目,其中项目webinf下的lib目录中上边的jar包与tomcat的jar包重复冲突。</p>
 
       
 
