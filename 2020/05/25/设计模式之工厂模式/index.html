@@ -8,33 +8,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>面向对象分析（一） | miracle_DZL的博客</title>
+  <title>设计模式之工厂模式 | miracle_DZL的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="面向对象分析（一）分析即把用户需求转换为系统需求 [TOC]">
+  <meta name="description" content="设计模式之工厂模式  鲁迅说程序设计的思想来源于生活 ！！！工厂顾名思义就是创建产品，根据产品是具体产品还是具体工厂可分为简单工厂模式和工厂方法模式，根据工厂的抽象程度可分为工厂方法模式和抽象工厂模式。该模式用于封装和管理对象的创建，是一种创建型模式。">
 <meta name="keywords" content="java web python 考研 算法 数据结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="面向对象分析（一）">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;18&#x2F;%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%86%E6%9E%90%EF%BC%88%E4%B8%80%EF%BC%89&#x2F;index.html">
+<meta property="og:title" content="设计模式之工厂模式">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;05&#x2F;25&#x2F;%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F&#x2F;index.html">
 <meta property="og:site_name" content="miracle_DZL的博客">
-<meta property="og:description" content="面向对象分析（一）分析即把用户需求转换为系统需求 [TOC]">
+<meta property="og:description" content="设计模式之工厂模式  鲁迅说程序设计的思想来源于生活 ！！！工厂顾名思义就是创建产品，根据产品是具体产品还是具体工厂可分为简单工厂模式和工厂方法模式，根据工厂的抽象程度可分为工厂方法模式和抽象工厂模式。该模式用于封装和管理对象的创建，是一种创建型模式。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http:&#x2F;&#x2F;pic.chenlun1314.top&#x2F;blog&#x2F;20200318&#x2F;b55LmrRVgifY.PNG">
-<meta property="og:image" content="http:&#x2F;&#x2F;pic.chenlun1314.top&#x2F;blog&#x2F;20200318&#x2F;b55LmrRVgifY.PNG">
-<meta property="og:image" content="http:&#x2F;&#x2F;pic.chenlun1314.top&#x2F;blog&#x2F;20200318&#x2F;E34RRjt6EVD7.PNG">
-<meta property="og:image" content="http:&#x2F;&#x2F;pic.chenlun1314.top&#x2F;blog&#x2F;20200319&#x2F;69tADxr6Ddq2.PNG">
-<meta property="og:image" content="http:&#x2F;&#x2F;pic.chenlun1314.top&#x2F;blog&#x2F;20200318&#x2F;fKVhA3e29gSw.PNG">
-<meta property="og:image" content="http:&#x2F;&#x2F;pic.chenlun1314.top&#x2F;blog&#x2F;20200319&#x2F;Vy7L7YPGC1T4.PNG">
-<meta property="og:image" content="http:&#x2F;&#x2F;pic.chenlun1314.top&#x2F;blog&#x2F;20200319&#x2F;PDALShJLAxtG.PNG">
-<meta property="og:image" content="http:&#x2F;&#x2F;pic.chenlun1314.top&#x2F;blog&#x2F;20200319&#x2F;TRa403mmOaFA.PNG">
-<meta property="og:image" content="http:&#x2F;&#x2F;pic.chenlun1314.top&#x2F;blog&#x2F;20200319&#x2F;egnt4mKAPw5A.PNG">
-<meta property="og:image" content="http:&#x2F;&#x2F;pic.chenlun1314.top&#x2F;blog&#x2F;20200319&#x2F;a54rH7dFuFoE.png?imageslim">
-<meta property="og:image" content="http:&#x2F;&#x2F;pic.chenlun1314.top&#x2F;blog&#x2F;20200319&#x2F;gesWRGPLCd7g.PNG">
-<meta property="og:image" content="http:&#x2F;&#x2F;pic.chenlun1314.top&#x2F;blog&#x2F;20200319&#x2F;6xfiW0G8KgWW.PNG">
-<meta property="og:image" content="http:&#x2F;&#x2F;pic.chenlun1314.top&#x2F;blog&#x2F;20200422&#x2F;rdTUxpwWwtLh.png?imageslim">
-<meta property="og:image" content="http:&#x2F;&#x2F;pic.chenlun1314.top&#x2F;blog&#x2F;20200319&#x2F;6YHubU8iq2Sa.png?imageslim">
-<meta property="og:updated_time" content="2020-04-22T03:22:06.684Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;pic2.zhimg.com&#x2F;v2-3cf0c230d1e02702d080b960175e564d_r.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;pic.chenlun1314.top&#x2F;blog&#x2F;20200526&#x2F;LWQ4vBVhriGO.png?imageslim">
+<meta property="og:image" content="http:&#x2F;&#x2F;pic.chenlun1314.top&#x2F;blog&#x2F;20200526&#x2F;kywvPoqVNADH.png?imageslim">
+<meta property="og:updated_time" content="2020-05-26T11:04:11.986Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;pic.chenlun1314.top&#x2F;blog&#x2F;20200318&#x2F;b55LmrRVgifY.PNG">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;pic2.zhimg.com&#x2F;v2-3cf0c230d1e02702d080b960175e564d_r.jpg">
   
     <link rel="alternative" href="/atom.xml" title="miracle_DZL的博客" type="application/atom+xml">
   
@@ -169,14 +158,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-面向对象分析（一）" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-设计模式之工厂模式" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      面向对象分析（一）
+      设计模式之工厂模式
     </h1>
   
 
@@ -187,65 +176,83 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/03/18/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%86%E6%9E%90%EF%BC%88%E4%B8%80%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-03-18T02:26:29.839Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-18</time>
+<a href="/2020/05/25/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-05-25T13:44:47.608Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="面向对象分析（一）"><a href="#面向对象分析（一）" class="headerlink" title="面向对象分析（一）"></a>面向对象分析（一）</h1><p>分析即把用户需求转换为系统需求</p>
-<p>[TOC]</p>
-<a id="more"></a>
+        <h2 id="设计模式之工厂模式"><a href="#设计模式之工厂模式" class="headerlink" title="设计模式之工厂模式"></a>设计模式之工厂模式</h2><p>  鲁迅说程序设计的思想来源于生活 ！！！工厂顾名思义就是创建产品，根据产品是具体产品还是具体工厂可分为简单工厂模式和工厂方法模式，根据工厂的抽象程度可分为工厂方法模式和抽象工厂模式。该模式用于封装和管理对象的创建，是一种创建型模式。<a id="more"></a></p>
+<h4 id="简单工厂模式"><a href="#简单工厂模式" class="headerlink" title="简单工厂模式"></a>简单工厂模式</h4><p>先说下简单工厂模式，其实这个没啥好说的挺简单</p>
+<ul>
+<li><p>将对象的创建和对象本身业务处理分离可以降低系统的耦合度，使得两者修改起来都相对容易。</p>
+<p>例子</p>
+<p>文件IO的操作我们会经常用得到吧，所以BufferedReader对象<strong>经常要创建</strong>的：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个BufferedReader对象</span></span><br><span class="line">    BufferedReader bf = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> FileReader(<span class="keyword">new</span> File(<span class="string">"aa.txt"</span>)));</span><br></pre></td></tr></table></figure>
 
-<h2 id="面向对象的主要步骤："><a href="#面向对象的主要步骤：" class="headerlink" title="面向对象的主要步骤："></a>面向对象的主要步骤：</h2><ol>
-<li>识别对象</li>
-<li>组织对象</li>
-<li>定义对象之间的关系</li>
-<li>定义对象的操作</li>
-<li>定义对象内部细节</li>
-</ol>
-<p>领域（用户角度） 系统（开发人员的角度）</p>
-<p>概念模型：表示了问题领域的“概念”及其关系，也称为领域模型。UML图形表示为“没有定义操作的类图”。概念类 == 领域概念</p>
-<h2 id="如何找到概念类："><a href="#如何找到概念类：" class="headerlink" title="如何找到概念类："></a>如何找到概念类：</h2><h3 id="1-概念模型-即“名词法”"><a href="#1-概念模型-即“名词法”" class="headerlink" title="1.概念模型 即“名词法”"></a>1.概念模型 即“名词法”</h3><ol>
-<li><p>​    重用或者修改已有的模型</p>
+<p>你说麻烦吗？其实也不麻烦，就一行代码嘛，哪里麻烦了~如果不太熟悉IO流的同学就没有那么机灵了，创建一个BufferedReader可能就是以下的代码了：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">File file = <span class="keyword">new</span> File(<span class="string">"aa.txt"</span>);</span><br><span class="line">        FileReader fileReader = <span class="keyword">new</span> FileReader(file);</span><br><span class="line">        BufferedReader bufferedReader = <span class="keyword">new</span> BufferedReader(fileReader);</span><br></pre></td></tr></table></figure>
+
+<p>你说麻烦吗？其实也不麻烦，不就是三行代码嘛，哪里麻烦了~如果这个应用<strong>很多的类上都用到了</strong>BufferedReader对象的话，那每个类都写上这三行代码了。那你说麻烦吗？那肯定麻烦啊，还用想啊….</p>
+<p>可以看出来，创建一个BufferReader对象里面需要一个FileReader对象，而FileReader对象又要File对象。那<strong>创建这个BufferReader对象还是比较麻烦的</strong>(代码上看不麻烦，从构造上看还是挺麻烦的)！</p>
+<p>虽然比较麻烦，但我们还能用，能用就行！于是乎，我们就去写代码了，现在有三个类都要进行文件的读写操作，于是他们就有这样的代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileOperateA</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> FileNotFoundException </span>&#123;</span><br><span class="line">        File file = <span class="keyword">new</span> File(<span class="string">"aa.txt"</span>);</span><br><span class="line">        FileReader fileReader = <span class="keyword">new</span> FileReader(file);</span><br><span class="line">        BufferedReader bufferedReader = <span class="keyword">new</span> BufferedReader(fileReader);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 读写文件....</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic2.zhimg.com/v2-3cf0c230d1e02702d080b960175e564d_r.jpg" alt=""></p>
+<p>此时：上头说，我要<strong>换成LineNumberReader来读写</strong>，有这个需求！那我们作为一个写代码的，能怎么办？很绝望也需要去完成呀。</p>
+<ul>
+<li>不熟悉IDE的小伙子就一个一个将BufferedReader改成LineNumberReader，现在就3个类用到了BufferedReader，也就改6次而已。(ps:那如果很多地方都用到了呢？)</li>
+<li>熟悉IDE的小伙子就全局替换重构，妥妥的！</li>
+</ul>
+<p>哎，写个代码屁事真多…那有没有一种方法能够让<strong>创建对象变得简单</strong>而且<strong>修改对象时能很方便</strong>呢？</p>
+<ul>
+<li><p>哎，工厂模式就行了。</p>
+<p>我们可以</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public class Factory &#123;</span><br><span class="line">    public static Reader use(String type)&#123;</span><br><span class="line">        Reader reader = null;</span><br><span class="line">        if (type == &quot;Buffer&quot;)&#123;</span><br><span class="line">            reader = new BufferedReader();</span><br><span class="line">        &#125;else if (type == &quot;Line&quot;)&#123;</span><br><span class="line">            reader = new LineNumberReader();</span><br><span class="line">        &#125;else &#123;</span><br><span class="line">            return reader</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中BufferedReader和LineNumberReader是Reader的子类。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class FileOperateA &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) throws FileNotFoundException &#123;</span><br><span class="line">        File file = new File(&quot;aa.txt&quot;);</span><br><span class="line">        FileReader fileReader = new FileReader(file);</span><br><span class="line">        Factroy f = new Factory;</span><br><span class="line">        f.use(&quot;Buffer&quot;)</span><br><span class="line">        // 读写文件....</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这时候修改的话只需要将f.use(“Buffer”)中的参数改为“Line”即可修改完毕。</p>
 </li>
-<li><p>​    借助行业，公司内部法的“概念类列表”</p>
+</ul>
 </li>
-<li><p>​    ☆在需求描述中查询名词（短语）：</p>
-<p>1.在问题领域的文本描述中，标识出名词，名词短语，把他们作为候选的概念类或者属性。</p>
-<p>2.对发现的名称短语进行分析，辨别是合适的概念类吗？概念可以合并吗？等等</p>
-<p>3.定义概念类之间的关系4.定义概念类之间的属性</p>
-<p>注意：</p>
-<p>​    不能机械的转换“名称”–&gt;“概念类”</p>
-<p>​    自然语言描述的文字有歧义，重复，一词多意，一意多次等，要仔细 分析</p>
-<p>​    比如英语，复数一般就不需要了，students\student,只要student即可。</p>
+<li><p>在调用工厂类的工厂方法时，由于工厂方法是静态方法，使用起来很方便，可通过类名直接调用，而且只需要传入一个简单的参数即可，在实际开发中，还可以在调用时将所传入的参数保存在XML等格式的配置文件中，修改参数时无须修改任何源代码。</p>
 </li>
-</ol>
-<h3 id="名词法案例：用例：废品回收机"><a href="#名词法案例：用例：废品回收机" class="headerlink" title="名词法案例：用例：废品回收机"></a>名词法案例：用例：废品回收机</h3><p><img src="http://pic.chenlun1314.top/blog/20200318/b55LmrRVgifY.PNG" alt=""></p>
-<p><img src="http://pic.chenlun1314.top/blog/20200318/b55LmrRVgifY.PNG" alt="mark"></p>
-<p><img src="http://pic.chenlun1314.top/blog/20200318/E34RRjt6EVD7.PNG" alt="mark"></p>
-<p><img src="http://pic.chenlun1314.top/blog/20200319/69tADxr6Ddq2.PNG" alt="mark"></p>
-<p><img src="http://pic.chenlun1314.top/blog/20200318/fKVhA3e29gSw.PNG" alt="mark"></p>
-<p><img src="http://pic.chenlun1314.top/blog/20200319/Vy7L7YPGC1T4.PNG" alt="mark"></p>
-<p><img src="http://pic.chenlun1314.top/blog/20200319/PDALShJLAxtG.PNG" alt="mark"></p>
-<p><img src="http://pic.chenlun1314.top/blog/20200319/TRa403mmOaFA.PNG" alt="mark"></p>
-<p><img src="http://pic.chenlun1314.top/blog/20200319/egnt4mKAPw5A.PNG" alt="mark"></p>
-<p><img src="http://pic.chenlun1314.top/blog/20200319/a54rH7dFuFoE.png?imageslim" alt="mark"></p>
-<h3 id="2分析模型法（边界-实体-控制）"><a href="#2分析模型法（边界-实体-控制）" class="headerlink" title="2分析模型法（边界 实体 控制）"></a>2分析模型法（边界 实体 控制）</h3><p>2.1分析模型法定义   </p>
-<p>2.2特性：行为， 展示(输入/输出) ，信息</p>
-<p>2.3分析模型的表示符号      边界类 控制类 信息</p>
-<p><img src="http://pic.chenlun1314.top/blog/20200319/gesWRGPLCd7g.PNG" alt="mark"></p>
-<p>2.4分析模型的语义</p>
-<p><img src="http://pic.chenlun1314.top/blog/20200319/6xfiW0G8KgWW.PNG" alt="mark"></p>
-<p>实体对象对显示系统状态的信息建模。这些信息通常用于记录操作的效果，因此与系统的行为相关。边界/接口对象对输入和输出以及处理它们的操作建模。控制对象对功能/操作进行建模，用于验证和决定是否处理接口对象的信息并将其传递给实体对象，或以其他方式传递。</p>
-<p><img src="http://pic.chenlun1314.top/blog/20200422/rdTUxpwWwtLh.png?imageslim" alt="mark"></p>
-<h3 id="分析模型案例：废品回收机"><a href="#分析模型案例：废品回收机" class="headerlink" title="分析模型案例：废品回收机"></a>分析模型案例：废品回收机</h3><p>​    找到和接口相关的概念：打印机接口 用户面板</p>
-<p>​    找到和实体相关的概念：罐子 计算  保存数据的</p>
-<p>​    找到控制相关的概念：代表的整个系统 Depoist item receiver</p>
-<p><img src="http://pic.chenlun1314.top/blog/20200319/6YHubU8iq2Sa.png?imageslim" alt="mark"></p>
-<h3 id="3-CRC法，类、职责，协作"><a href="#3-CRC法，类、职责，协作" class="headerlink" title="3.CRC法，类、职责，协作"></a>3.CRC法，类、职责，协作</h3><p>见下篇</p>
+<li><p>简单工厂模式最大的问题在于工厂类的职责相对过重，增加新的产品需要修改工厂类的判断逻辑，这一点与开闭原则是相违背的。而且一旦工厂类中发生错误，会导致整个程序发生很大的破坏。</p>
+</li>
+<li><p>简单工厂模式的要点在于：当你需要什么，只需要传入一个正确的参数，就可以获取你所需要的对象，而无须知道其创建细节。</p>
+</li>
+</ul>
+<h4 id="工厂方法模式"><a href="#工厂方法模式" class="headerlink" title="工厂方法模式"></a>工厂方法模式</h4><ul>
+<li>工厂方法模式又称为工厂模式，它属于类创建型模式。在工厂方法模式中，工厂父类负责定义创建产品对象的公共接口，而工厂子类则负责生成具体的产品对象，这样做的目的是将产品类的实例化操作延迟到工厂子类中完成，即通过工厂子类来确定究竟应该实例化哪一个具体产品类。</li>
+<li>工厂方法模式包含四个角色：抽象产品是定义产品的接口，是工厂方法模式所创建对象的超类型，即产品对象的共同父类或接口；具体产品实现了抽象产品接口，某种类型的具体产品由专门的具体工厂创建，它们之间往往一一对应；抽象工厂中声明了工厂方法，用于返回一个产品，它是工厂方法模式的核心，任何在模式中创建对象的工厂类都必须实现该接口；具体工厂是抽象工厂类的子类，实现了抽象工厂中定义的工厂方法，并可由客户调用，返回一个具体产品类的实例。</li>
+<li>工厂方法模式是简单工厂模式的进一步抽象和推广。由于使用了面向对象的多态性，工厂方法模式保持了简单工厂模式的优点，而且克服了它的缺点。在工厂方法模式中，核心的工厂类不再负责所有产品的创建，而是将具体创建工作交给子类去做。这个核心类仅仅负责给出具体工厂必须实现的接口，而不负责产品类被实例化这种细节，这使得工厂方法模式可以允许系统在不修改工厂角色的情况下引进新产品。</li>
+<li>工厂方法模式的主要优点是增加新的产品类时无须修改现有系统，并封装了产品对象的创建细节，系统具有良好的灵活性和可扩展性；其缺点在于增加新产品的同时需要增加新的工厂，导致系统类的个数成对增加，在一定程度上增加了系统的复杂性。</li>
+<li>工厂方法模式适用情况包括：一个类不知道它所需要的对象的类；一个类通过其子类来指定创建哪个对象；将创建对象的任务委托给多个工厂子类中的某一个，客户端在使用时可以无须关心是哪一个工厂子类创建产品子类，需要时再动态指定。</li>
+</ul>
+<p>代码演示</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//抽象产品类</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Prodcut</span> </span>&#123;</span><br><span class="line">    <span class="comment">//抽象产品方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="title">sayHi</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//继承抽象类实现产品A类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProductA</span> <span class="keyword">extends</span> <span class="title">Product</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//实现抽象产品方法</span></span><br><span class="line">    <span class="meta">@Overide</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="title">sayHi</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hi, I'm ProductA"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//继承抽象类实现产品A类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProductB</span> <span class="keyword">extends</span> <span class="title">Product</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//实现抽象产品方法</span></span><br><span class="line">    <span class="meta">@Overide</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="title">sayHi</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hi, I'm ProductB"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//工厂抽象类</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Factory</span> </span>&#123;</span><br><span class="line">    <span class="comment">//抽象工厂方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> Product <span class="title">createProduct</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//具体工厂类FactoryA</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FactoryA</span> <span class="keyword">extends</span> <span class="title">Factory</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Overide</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Product <span class="title">createProduct</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"生产了一个A"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ProductA();<span class="comment">//生产产品A</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//具体工厂类FactoryB</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FactoryB</span> <span class="keyword">extends</span> <span class="title">Factory</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Overide</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Product <span class="title">createProduct</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"生产了一个B"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ProductB();<span class="comment">//生产产品B</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="抽象工厂模式"><a href="#抽象工厂模式" class="headerlink" title="抽象工厂模式:"></a>抽象工厂模式:</h4><p>抽象工厂模式是指当有多个抽象角色时，使用的一种工厂模式。抽象工厂，非常适合解决两个维度的组合产品的构造问题，取其中一个维度作为产品族，另外一个维度作为产品族中具体的多个产品。</p>
+<p>产品族是具有相同属性的同类型产品；如宝马车，宝马1系，宝马2系，都属于宝马；</p>
+<p>由于产品族可能会有很多产品，这样的话如果按照工厂方法模式的写法，那样就需要每次添加一个产品类和工厂类；这样就会添加很多类文件，这里抽象工厂模式，其实就是将产品抽象成产品族，一个产品可能具有不同属性，这里工厂类只需要产品属性的共性抽象出来。</p>
+<h4 id="抽象工厂模式的构成"><a href="#抽象工厂模式的构成" class="headerlink" title="抽象工厂模式的构成"></a><strong>抽象工厂模式的构成</strong></h4><ul>
+<li>抽象工厂角色：是具体工厂角色必须实现的接口或者必须继承的父类。</li>
+<li>具体工厂角色：继承抽象工厂类，实现创建对应的具体产品的对象。</li>
+<li>抽象产品角色：它是具体产品继承的父类或者是实现的接口。这里抽象产品至少2个维度；</li>
+<li>具体产品角色：具体工厂角色所创建的对象就是此角色的实例。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//抽象形状类</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Shape</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">sayShape</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//矩形类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Retangle</span> <span class="keyword">extends</span> <span class="title">Shape</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Overide</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sayShape</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hi, I'm Retangle!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//圆形类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Circle</span> <span class="keyword">extends</span> <span class="title">Shape</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Overide</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sayShape</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hi, I'm Circle!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//抽象颜色类</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Color</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">sayColor</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//红色类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Red</span> <span class="keyword">extends</span> <span class="title">Color</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Overide</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sayColor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hi, I'm Red!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//白色类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">White</span> <span class="keyword">extends</span> <span class="title">Color</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Overide</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sayColor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hi, I'm White!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//抽象工厂类</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">ShapeFactory</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> Shape <span class="title">createShape</span><span class="params">()</span></span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> Color <span class="title">createColor</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//红色的圆</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedCircleFactory</span> <span class="keyword">extends</span> <span class="title">ShapeFactory</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Overide</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Shape <span class="title">createShape</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Circle();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Overide</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Color <span class="title">createColor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Red();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//白色的圆</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WhiteCircleFactory</span> <span class="keyword">extends</span> <span class="title">ShapeFactory</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Overide</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Shape <span class="title">createShape</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Circle();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Overide</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Color <span class="title">createColor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> White();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>UML图如下：简单工厂、工厂方法、</p>
+<p><img src="http://pic.chenlun1314.top/blog/20200526/LWQ4vBVhriGO.png?imageslim" alt="mark"></p>
+<p><img src="http://pic.chenlun1314.top/blog/20200526/kywvPoqVNADH.png?imageslim" alt="mark"></p>
+<h4 id="个人总结"><a href="#个人总结" class="headerlink" title="个人总结"></a><strong>个人总结</strong></h4><p>简单工厂模式是将new对象变成由工厂类中的方法进行创建对象，工厂方法模式，则在此基础之上抽象工厂概念，将工厂类抽象为接口，由子类来创建具体产品。而抽象方法对象再在此基础之上，再次增加抽象产品，解决产品的组合和构造问题。</p>
 
       
 
@@ -325,7 +332,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/18/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%86%E6%9E%90%EF%BC%88%E4%B8%80%EF%BC%89/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/25/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -339,18 +346,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/03/19/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%86%E6%9E%90%EF%BC%88%E4%BA%8C%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/05/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          面向对象分析（二）
+          设计模式之单例模式
         
       </div>
     </a>
   
   
-    <a href="/2019/12/19/%E9%93%B6%E8%A1%8CATM%E6%9C%BAjava%20swing%E5%AE%9E%E7%8E%B0/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">银行ATM机java swing实现</div>
+    <a href="/2020/05/25/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">设计模式</div>
       <i class="icon-circle-right"></i>
     </a>
   
